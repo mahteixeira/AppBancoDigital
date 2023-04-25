@@ -10,7 +10,7 @@ namespace BancoDigital
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new View.CadastroCorrentista());
         }
 
         protected override void OnStart()

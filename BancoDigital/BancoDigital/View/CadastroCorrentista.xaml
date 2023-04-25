@@ -4,9 +4,24 @@
              x:Class="BancoDigital.View.CadastroCorrentista">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
+            <Label Text="Cadastro correntista"
                 HorizontalOptions="CenterAndExpand" />
+
+            <Label Text="Digite seu nome:" FontSize="20"/>
+            <Entry x:Name="txt_nome" FontSize="20"/>
+
+            <Label Text="Data de nascimento:" FontSize="20"/>
+            <DatePicker x:Name="dtpck_data_nasc" Format="dd/MM/yyyy"/>
+
+            <Label Text="Informe seu CPF:" FontSize="20"/>
+            <Entry x:Name="txt_cpf" FontSize="20"/>
+
+            <Label Text="Crie uma senha:" FontSize="20"/>
+            <Entry x:Name="txt_" FontSize="20"/>
+
+            <Button Text="Cadastrar" x:Name="btn_cadastro" Clicked="btn_cadastro_Clicked"/>
+            
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
