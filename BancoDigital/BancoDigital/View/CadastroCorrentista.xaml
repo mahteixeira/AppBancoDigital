@@ -17,7 +17,7 @@
             <Entry x:Name="txt_cpf" FontSize="20"/>
 
             <Label Text="Crie uma senha:" FontSize="20"/>
-            <Entry x:Name="txt_" FontSize="20"/>
+            <Entry x:Name="txt_senha" FontSize="20"/>
 
             <Button Text="Cadastrar" x:Name="btn_cadastro" Clicked="btn_cadastro_Clicked"/>
             

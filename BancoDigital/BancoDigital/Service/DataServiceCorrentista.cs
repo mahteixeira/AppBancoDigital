@@ -19,18 +19,16 @@ namespace BancoDigital.Service
                 return arr_correntistas;
             }
 
-            public static async Task<Correntista> Cadastrar(Correntista c)
+            public static async Task<bool> Cadastrar(Correntista c)
             {
                 var json_a_enviar = JsonConvert.SerializeObject(c);
 
-                string json = await DataService.PostDataToService(json_a_enviar, "/correntista/salvar");
+                string json = await DataService.PostDataToService(json_a_enviar, "/correntista/save");
 
-                Correntista co = JsonConvert.DeserializeObject<Correntista>(json);
+                return true;
+            }
 
-                return co;
-        }
-
-            public static async Task<List<Correntista>> SearchAsync(string q)
+        public static async Task<List<Correntista>> SearchAsync(string q)
             {
                 var json_a_enviar = JsonConvert.SerializeObject(q);
 

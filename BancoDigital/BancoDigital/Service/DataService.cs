@@ -41,10 +41,6 @@ namespace BancoDigital.Service
             return json_response;
         }
 
-
-        /**
-         * Método que envia os dados para o servidor via post
-         */
         protected static async Task<string> PostDataToService(string json_object, string rota)
         {
             string json_response;

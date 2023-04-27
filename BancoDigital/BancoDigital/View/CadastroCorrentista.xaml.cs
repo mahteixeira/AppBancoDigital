@@ -23,15 +23,16 @@ namespace BancoDigital.View
         {
             try
             {
-                Correntista c = await DataServiceCorrentista.Cadastrar(new Correntista
+                await DataServiceCorrentista.Cadastrar(new Correntista
                 {
                     nome = txt_nome.Text,
-                    data_nasc = dtpck_data_nasc.Date
+                    data_nasc = dtpck_data_nasc.Date,
+                    cpf = txt_cpf.Text,
+                    senha = txt_senha.Text
                 });
 
-                string msg = $"Pessoa inserida com sucesso. Código gerado: {c.id} ";
 
-                await DisplayAlert("Sucesso!", msg, "OK");
+                await DisplayAlert("Sucesso!","Você foi cadastrado.", "OK");
 
             }
             catch (Exception ex)
