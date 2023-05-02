@@ -4,9 +4,14 @@
              x:Class="BancoDigital.View.Login">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="CPF:" FontSize="20"/>
+            <Entry x:Name="txt_cpf" FontSize="20"/>
+
+            <Label Text="Senha:" FontSize="20"/>
+            <Entry x:Name="txt_senha" FontSize="20"/>
+
+            <Button Text="ENTRAR" x:Name="btn_entrar"/>
+            <Button Text="Cadastro" x:Name="btn_cadastro" Clicked="btn_cadastro_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

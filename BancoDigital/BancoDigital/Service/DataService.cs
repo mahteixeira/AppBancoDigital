@@ -59,12 +59,18 @@ namespace BancoDigital.Service
                     new StringContent(json_object, Encoding.UTF8, "application/json")
                 );
 
+                Console.WriteLine(response.Content.ReadAsStringAsync().Result);
+
                 if (response.IsSuccessStatusCode)
                 {
                     json_response = response.Content.ReadAsStringAsync().Result;
                 }
                 else
+                {
+                    
+
                     throw new Exception(DecodeServerError(response.StatusCode));
+                }
             }
 
             return json_response;

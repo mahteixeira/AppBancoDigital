@@ -17,6 +17,7 @@ namespace BancoDigital.View
         public CadastroCorrentista()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         private async void btn_cadastro_Clicked(object sender, EventArgs e)

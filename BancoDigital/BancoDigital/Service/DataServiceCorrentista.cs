@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,25 +20,26 @@ namespace BancoDigital.Service
                 return arr_correntistas;
             }
 
-            public static async Task<bool> Cadastrar(Correntista c)
+        public static async Task<object> Cadastrar(Correntista correntistaModel)
+        {
+            string json = JsonConvert.SerializeObject(correntistaModel);
+
+            string response = await PostDataToService(json, "/correntista/save");
+
+            var obj = JsonConvert.DeserializeObject(response);
+
+            Correntista correntista = obj as Correntista;
+
+            if (correntista != null)
+                return obj as Correntista;
+            else
+                throw new Exception("Algo está errado");
+        }
+
+        /*public static async Task<List<Correntista>> ConferirLogin(string cpf, string senha)
             {
-                var json_a_enviar = JsonConvert.SerializeObject(c);
-
-                string json = await DataService.PostDataToService(json_a_enviar, "/correntista/save");
-
-                return true;
-            }
-
-        public static async Task<List<Correntista>> SearchAsync(string q)
-            {
-                var json_a_enviar = JsonConvert.SerializeObject(q);
-
-                string json = await DataService.PostDataToService(json_a_enviar, "/correntista/buscar");
-
-                List<Correntista> arr_correntistas = JsonConvert.DeserializeObject<List<Correntista>>(json);
-
-                return arr_correntistas;
-            }
+            
+            } */
 
             public static async Task<List<Correntista>> DeleteAsync(int id)
             {
