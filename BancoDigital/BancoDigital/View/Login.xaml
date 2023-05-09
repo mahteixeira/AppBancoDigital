@@ -12,21 +12,23 @@
                    VerticalOptions="CenterAndExpand" 
                    Grid.Row="1" 
                    Grid.RowSpan="2"
-                   Margin="15,-150,15,0"
+                   Margin="15,-130,15,0"
                    >
                     <StackLayout>
-                        <Label Text="CPF:" FontSize="20"/>
-                        <Entry x:Name="txt_cpf" FontSize="20"/>
+                        <Label Text="CPF:" FontSize="20" Style="{StaticResource fonteComum}"/>
+                        <Entry x:Name="txt_cpf" FontSize="20" Style="{StaticResource fonteComum}"/>
 
-                        <Label Text="Senha:" FontSize="20"/>
-                        <Entry x:Name="txt_senha" FontSize="20"/>
+                        <Label Text="Senha:" FontSize="20" Style="{StaticResource fonteComum}"/>
+                        <Entry x:Name="txt_senha" FontSize="20" Style="{StaticResource fonteComum}"/>
 
-                        <Button Text="ENTRAR" x:Name="btn_entrar"/>
+                        <Button Text="ENTRAR" x:Name="btn_entrar" Style="{StaticResource fonteTitulos}" BackgroundColor="#E991C6" CornerRadius="20" />
                     </StackLayout>
                 </Frame>
             </Grid>
-            <Button Text="Cadastro" x:Name="btn_cadastro" Clicked="btn_cadastro_Clicked" Margin="10,-50,10,40"/>
-        
+            <StackLayout Margin="0,0,0,20">
+                <Label Text="Não possui conta?" HorizontalTextAlignment="Center" FontSize="15" Style="{StaticResource fonteComum}" TextColor="Black"/>
+                <Button Text="Cadastre-se" x:Name="btn_cadastro" Clicked="btn_cadastro_Clicked" Style="{StaticResource fonteTitulos}" BackgroundColor="#E991C6" CornerRadius="20" BorderColor="#fff" BorderWidth="2" Margin="50,0" HeightRequest="35"/>
+        </StackLayout>
             </StackLayout>
     </ContentPage.Content>
 </ContentPage>
