@@ -3,25 +3,37 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BancoDigital.View.CadastroCorrentista">
     <ContentPage.Content>
+
         <StackLayout>
-            <Label Text="Cadastro correntista"
+            <Label Text="Cadastro"
                 HorizontalOptions="CenterAndExpand" />
+        <Frame CornerRadius="10"
+                   x:Name="frm_login"
+                   HasShadow="False"
+                   VerticalOptions="CenterAndExpand" 
+                   Grid.Row="1" 
+                   Grid.RowSpan="2"
+                   Margin="15,0,15,0"
+                   >
+            <StackLayout>
 
-            <Label Text="Digite seu nome:" FontSize="20"/>
-            <Entry x:Name="txt_nome" FontSize="20"/>
+                <Label Text="Digite seu nome:" FontSize="20"/>
+                <Entry x:Name="txt_nome" FontSize="20"/>
 
-            <Label Text="Data de nascimento:" FontSize="20"/>
-            <DatePicker x:Name="dtpck_data_nasc" Format="dd/MM/yyyy"/>
+                <Label Text="Data de nascimento:" FontSize="20"/>
+                <DatePicker x:Name="dtpck_data_nasc" Format="dd/MM/yyyy"/>
 
-            <Label Text="Informe seu CPF:" FontSize="20"/>
-            <Entry x:Name="txt_cpf" FontSize="20"/>
+                <Label Text="Informe seu CPF:" FontSize="20"/>
+                <Entry x:Name="txt_cpf" FontSize="20"/>
 
-            <Label Text="Crie uma senha:" FontSize="20"/>
-            <Entry x:Name="txt_senha" FontSize="20"/>
+                <Label Text="Crie uma senha:" FontSize="20"/>
+                <Entry x:Name="txt_senha" FontSize="20"/>
 
-            <Button Text="Cadastrar" x:Name="btn_cadastro" Clicked="btn_cadastro_Clicked"/>
-            
+                <Button Text="Cadastrar" x:Name="btn_cadastro" Clicked="btn_cadastro_Clicked"/>
 
+
+            </StackLayout>
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

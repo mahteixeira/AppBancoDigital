@@ -1,17 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BancoDigital.View.Login">
+             x:Class="BancoDigital.View.Login" Background="#E991C6">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="CPF:" FontSize="20"/>
-            <Entry x:Name="txt_cpf" FontSize="20"/>
+            <Grid RowDefinitions="*,*" ColumnDefinitions="*">
+                <Label Text="mouss" x:Name="logoMouss" FontSize="60" HorizontalTextAlignment="Center" Margin="0,50,0,0" Grid.Row="0" HeightRequest="200" Style="{StaticResource fonteTitulos}"/>
+                <Frame CornerRadius="10"
+                   x:Name="frm_login"
+                   HasShadow="False"
+                   VerticalOptions="CenterAndExpand" 
+                   Grid.Row="1" 
+                   Grid.RowSpan="2"
+                   Margin="15,-150,15,0"
+                   >
+                    <StackLayout>
+                        <Label Text="CPF:" FontSize="20"/>
+                        <Entry x:Name="txt_cpf" FontSize="20"/>
 
-            <Label Text="Senha:" FontSize="20"/>
-            <Entry x:Name="txt_senha" FontSize="20"/>
+                        <Label Text="Senha:" FontSize="20"/>
+                        <Entry x:Name="txt_senha" FontSize="20"/>
 
-            <Button Text="ENTRAR" x:Name="btn_entrar"/>
-            <Button Text="Cadastro" x:Name="btn_cadastro" Clicked="btn_cadastro_Clicked"/>
-        </StackLayout>
+                        <Button Text="ENTRAR" x:Name="btn_entrar"/>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+            <Button Text="Cadastro" x:Name="btn_cadastro" Clicked="btn_cadastro_Clicked" Margin="10,-50,10,40"/>
+        
+            </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -17,6 +17,8 @@ namespace BancoDigital.View
         public Login()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
+            frm_login.BackgroundColor = Color.FromRgba(1, 1, 1, 0.8);
         }
 
         private async void btn_cadastro_Clicked(object sender, EventArgs e)
