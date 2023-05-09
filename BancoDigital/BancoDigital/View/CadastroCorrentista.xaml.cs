@@ -18,6 +18,8 @@ namespace BancoDigital.View
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
+            canto.Source = ImageSource.FromResource("BancoDigital.Imagens.canto.png");
+           
         }
 
         private async void btn_cadastro_Clicked(object sender, EventArgs e)
@@ -40,6 +42,20 @@ namespace BancoDigital.View
             {
                 await DisplayAlert("Ops", ex.Message, "OK");
 
+            }
+        }
+
+        private async void btn_login_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+
+                await Navigation.PushAsync(new View.Login());
+
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Ops", ex.Message, "OK");
             }
         }
     }

@@ -1,34 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BancoDigital.View.Login" Background="#E991C6">
+             x:Class="BancoDigital.View.Login" Background="#fff">
     <ContentPage.Content>
         <StackLayout>
-            <Grid RowDefinitions="*,*" ColumnDefinitions="*">
-                <Label Text="mouss" x:Name="logoMouss" FontSize="60" HorizontalTextAlignment="Center" Margin="0,50,0,0" Grid.Row="0" HeightRequest="200" Style="{StaticResource fonteTitulos}"/>
+            <Image x:Name="logo" Margin="0,30,0,0" />
+            <Image x:Name="canto" HeightRequest="250" HorizontalOptions="Start" Margin="0,-265,0,0"/>
+            <StackLayout>
                 <Frame CornerRadius="10"
                    x:Name="frm_login"
                    HasShadow="False"
                    VerticalOptions="CenterAndExpand" 
                    Grid.Row="1" 
                    Grid.RowSpan="2"
-                   Margin="15,-130,15,0"
+                   Margin="15,50,15,0"
                    >
                     <StackLayout>
-                        <Label Text="CPF:" FontSize="20" Style="{StaticResource fonteComum}"/>
-                        <Entry x:Name="txt_cpf" FontSize="20" Style="{StaticResource fonteComum}"/>
+                        <Label Text="CPF:" FontSize="17" Style="{StaticResource fonteComum}"/>
+                        <Entry x:Name="txt_cpf" FontSize="18" Style="{StaticResource fonteComum}" Margin="0,-15,0,0"/>
 
-                        <Label Text="Senha:" FontSize="20" Style="{StaticResource fonteComum}"/>
-                        <Entry x:Name="txt_senha" FontSize="20" Style="{StaticResource fonteComum}"/>
+                        <Label Text="Senha:" FontSize="17" Style="{StaticResource fonteComum}"/>
+                        <Entry x:Name="txt_senha" FontSize="18" Style="{StaticResource fonteComum}" Margin="0,-15,0,0" />
 
-                        <Button Text="ENTRAR" x:Name="btn_entrar" Style="{StaticResource fonteTitulos}" BackgroundColor="#E991C6" CornerRadius="20" />
+                        <Button Text="ENTRAR" x:Name="btn_entrar" Style="{StaticResource fonteTitulos}" BackgroundColor="#EE83D7" CornerRadius="20" />
+                        
                     </StackLayout>
                 </Frame>
-            </Grid>
-            <StackLayout Margin="0,0,0,20">
-                <Label Text="Não possui conta?" HorizontalTextAlignment="Center" FontSize="15" Style="{StaticResource fonteComum}" TextColor="Black"/>
-                <Button Text="Cadastre-se" x:Name="btn_cadastro" Clicked="btn_cadastro_Clicked" Style="{StaticResource fonteTitulos}" BackgroundColor="#E991C6" CornerRadius="20" BorderColor="#fff" BorderWidth="2" Margin="50,0" HeightRequest="35"/>
-        </StackLayout>
+            </StackLayout>
+            <Image x:Name="canto2" HeightRequest="250" HorizontalOptions="End" Margin="0,0,-2,0"/>
+            <Button Text="Cadastre-se" x:Name="btn_cadastro" Clicked="btn_cadastro_Clicked" Style="{StaticResource fonteTitulos}" BackgroundColor="#fff"  TextColor="#EE83D7" BorderWidth="2" Margin="50,-260,50,0" HeightRequest="35"/>
+            <Label Text="Não possui conta?" HorizontalTextAlignment="Center" FontSize="15" Style="{StaticResource fonteComum}" TextColor="Black" Margin="0,-55,0,0"/>
             </StackLayout>
     </ContentPage.Content>
 </ContentPage>

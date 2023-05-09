@@ -11,11 +11,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Imagens\logoMouss.png" />
+    <None Remove="Imagens\canto.png" />
+    <None Remove="Imagens\canto2.png" />
+    <None Remove="Imagens\logo.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Imagens\logoMouss.png">
+    <EmbeddedResource Include="Imagens\canto.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imagens\canto2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imagens\logo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

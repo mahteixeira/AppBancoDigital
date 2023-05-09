@@ -19,6 +19,9 @@ namespace BancoDigital.View
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
             frm_login.BackgroundColor = Color.FromRgba(1, 1, 1, 0.8);
+            logo.Source = ImageSource.FromResource("BancoDigital.Imagens.logo.png");
+            canto.Source = ImageSource.FromResource("BancoDigital.Imagens.canto.png");
+            canto2.Source = ImageSource.FromResource("BancoDigital.Imagens.canto2.png");
         }
 
         private async void btn_cadastro_Clicked(object sender, EventArgs e)
