@@ -31,7 +31,10 @@
                     <Label Text="Crie uma senha:" FontSize="18" Style="{StaticResource fonteComum}"/>
                     <Entry x:Name="txt_senha" FontSize="18" Style="{StaticResource fonteComum}" Margin="0,-15,0,0"/>
 
-                    <Button Text="Cadastrar" x:Name="btn_cadastro" CornerRadius="20" TextColor="White" Style="{StaticResource fonteTitulos}">
+                    <Label Text="Repita a senha:" FontSize="18" Style="{StaticResource fonteComum}"/>
+                    <Entry x:Name="txt_confsenha" FontSize="18" Style="{StaticResource fonteComum}" Margin="0,-15,0,0"/>
+                    
+                    <Button Text="Cadastrar" x:Name="btn_cadastro" Clicked="btn_cadastro_Clicked" CornerRadius="20" TextColor="White" Style="{StaticResource fonteTitulos}">
                         <Button.Background>
                             <LinearGradientBrush EndPoint="1,0">
                                 <GradientStop Color="#EE83D7" Offset="0.1" />

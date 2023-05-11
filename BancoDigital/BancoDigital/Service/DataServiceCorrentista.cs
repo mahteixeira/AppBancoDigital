@@ -30,18 +30,29 @@ namespace BancoDigital.Service
 
             Correntista correntista = obj as Correntista;
 
-            if (correntista != null)
-                return obj as Correntista;
-            else
-                throw new Exception("Algo está errado");
+            return obj as Correntista;
         }
 
-        /*public static async Task<List<Correntista>> ConferirLogin(string cpf, string senha)
+       /* public static async Task<List<Correntista>> Login(string cpf, string senha)
+        {
+            //string nome;
+            using (HttpClient client = new HttpClient())
             {
-            
-            } */
+                HttpResponseMessage response = await client.GetAsync("/correntista/login?cpf=" + cpf + "&senha=" + senha);
+                if (response.IsSuccessStatusCode)
+                {
+                    string json = response.Content.ReadAsStringAsync().Result;
 
-            public static async Task<List<Correntista>> DeleteAsync(int id)
+  
+                    
+                }
+                else
+                    throw new Exception(response.RequestMessage.Content.ToString());
+            }
+
+        }*/
+
+        public static async Task<List<Correntista>> DeleteAsync(int id)
             {
                 var json_a_enviar = JsonConvert.SerializeObject(id);
 

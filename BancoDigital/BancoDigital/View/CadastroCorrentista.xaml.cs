@@ -26,23 +26,37 @@ namespace BancoDigital.View
         {
             try
             {
-                await DataServiceCorrentista.Cadastrar(new Correntista
+                if (txt_nome.Text == null | txt_senha.Text == null | txt_cpf.Text == null | txt_confsenha.Text == null)
                 {
-                    nome = txt_nome.Text,
-                    data_nasc = dtpck_data_nasc.Date,
-                    cpf = txt_cpf.Text,
-                    senha = txt_senha.Text
-                });
+                    await DisplayAlert("Ops!", "Você provavelmente deixou algo em branco.", "OK");
+                }
+                else
+                {
+                    if (txt_senha.Text != txt_confsenha.Text) {
+
+                        await DisplayAlert("Ops!", "As senhas não batem.", "OK");
+
+                    } else { 
+                    await DataServiceCorrentista.Cadastrar(new Correntista
+                    {
+                        nome = txt_nome.Text,
+                        data_nasc = dtpck_data_nasc.Date,
+                        cpf = txt_cpf.Text,
+                        senha = txt_senha.Text
+                    });
 
 
-                await DisplayAlert("Sucesso!","Você foi cadastrado.", "OK");
+                    await DisplayAlert("Sucesso!", "Você foi cadastrado.", "OK");
+                    await Navigation.PushAsync(new View.Login());
 
+                }
+            }
             }
             catch (Exception ex)
             {
                 await DisplayAlert("Ops", ex.Message, "OK");
 
-            }
+            } 
         }
 
         private async void btn_login_Clicked(object sender, EventArgs e)
