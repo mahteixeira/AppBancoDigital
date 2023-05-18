@@ -4,7 +4,7 @@
              x:Class="BancoDigital.View.Inicio">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Label Text="DEU CERTO VC LOGOU!!!!!!!!!!!!!!!!!!!!!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>

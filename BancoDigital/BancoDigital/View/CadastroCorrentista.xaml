@@ -6,6 +6,7 @@
 
         <StackLayout>
             <Image x:Name="canto" HeightRequest="250" HorizontalOptions="Start" Margin="0,0,0,0"/>
+            <ActivityIndicator x:Name="carregando" IsRunning="False" IsVisible="False" Color="#BB4DCF" VerticalOptions="CenterAndExpand" Margin="0,120,0,600" />
 
             <Label Text="Cadastro"
                 HorizontalOptions="CenterAndExpand" Style="{StaticResource fonteTitulos}" TextColor="#BB4DCF" Margin="0,-140,0,0" FontSize="55"/>

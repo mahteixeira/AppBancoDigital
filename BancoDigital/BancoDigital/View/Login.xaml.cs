@@ -37,5 +37,27 @@ namespace BancoDigital.View
                 await DisplayAlert("Ops", ex.Message, "OK");
             }
         }
+
+        private async void btn_entrar_Clicked(object sender, EventArgs e)
+        {
+            string cpf = txt_cpf.Text;
+            string senha = txt_senha.Text;
+
+            try
+            {
+                Correntista correntista = await DataServiceCorrentista.Login(new Correntista
+                {
+                    cpf = cpf,
+                    senha = senha
+                });
+
+                await Navigation.PushAsync(new View.Inicio());
+
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Ops", ex.Message, "OK");
+            }
+        }
     }
 }

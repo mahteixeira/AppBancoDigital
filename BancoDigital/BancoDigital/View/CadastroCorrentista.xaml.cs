@@ -26,6 +26,11 @@ namespace BancoDigital.View
         {
             try
             {
+
+                carregando.IsRunning = true;
+                carregando.IsVisible = true; 
+
+
                 if (txt_nome.Text == null | txt_senha.Text == null | txt_cpf.Text == null | txt_confsenha.Text == null)
                 {
                     await DisplayAlert("Ops!", "Você provavelmente deixou algo em branco.", "OK");
@@ -56,7 +61,12 @@ namespace BancoDigital.View
             {
                 await DisplayAlert("Ops", ex.Message, "OK");
 
-            } 
+            }
+            finally
+            {
+                carregando.IsRunning = false;
+                carregando.IsVisible = false;
+            }
         }
 
         private async void btn_login_Clicked(object sender, EventArgs e)

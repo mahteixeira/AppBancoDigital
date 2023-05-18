@@ -30,6 +30,10 @@ namespace BancoDigital.Service
             {
                 HttpResponseMessage response = await client.GetAsync(uri);
 
+                Console.WriteLine("-------------------------------");
+                Console.WriteLine(response.Content.ReadAsStringAsync().Result);
+                Console.WriteLine("-------------------------------");
+
                 if (response.IsSuccessStatusCode)
                 {
                     json_response = response.Content.ReadAsStringAsync().Result;

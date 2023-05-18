@@ -4,8 +4,9 @@
              x:Class="BancoDigital.View.Login" Background="#fff">
     <ContentPage.Content>
         <StackLayout>
-            <Image x:Name="logo" Margin="0,30,0,0" />
-            <Image x:Name="canto" HeightRequest="250" HorizontalOptions="Start" Margin="0,-265,0,0"/>
+            <Image x:Name="logo" Margin="0,100,0,0" />
+            <Image x:Name="canto" HeightRequest="250" HorizontalOptions="Start" Margin="0,-335,0,0"/>
+    
             <StackLayout>
                 <Frame CornerRadius="10"
                    x:Name="frm_login"
@@ -20,14 +21,14 @@
                         <Entry x:Name="txt_cpf" FontSize="18" Style="{StaticResource fonteComum}" Margin="0,-15,0,0"/>
 
                         <Label Text="Senha:" FontSize="17" Style="{StaticResource fonteComum}"/>
-                        <Entry x:Name="txt_senha" FontSize="18" Style="{StaticResource fonteComum}" Margin="0,-15,0,0" />
+                        <Entry x:Name="txt_senha" FontSize="18" Style="{StaticResource fonteComum}" Margin="0,-15,0,0" IsPassword="True"/>
 
-                        <Button Text="ENTRAR" x:Name="btn_entrar" Style="{StaticResource fonteTitulos}" BackgroundColor="#EE83D7" CornerRadius="20" />
+                        <Button Text="ENTRAR" x:Name="btn_entrar" Style="{StaticResource fonteTitulos}" BackgroundColor="#EE83D7" CornerRadius="20" Clicked="btn_entrar_Clicked"/>
                         
                     </StackLayout>
                 </Frame>
             </StackLayout>
-            <Image x:Name="canto2" HeightRequest="250" HorizontalOptions="End" Margin="0,0,-2,0"/>
+            <Image x:Name="canto2" HeightRequest="250" HorizontalOptions="End" Margin="0,67,-2,0"/>
             <Button Text="Cadastre-se" x:Name="btn_cadastro" Clicked="btn_cadastro_Clicked" Style="{StaticResource fonteTitulos}" BackgroundColor="#fff"  TextColor="#EE83D7" BorderWidth="2" Margin="50,-260,50,0" HeightRequest="35"/>
             <Label Text="Não possui conta?" HorizontalTextAlignment="Center" FontSize="15" Style="{StaticResource fonteComum}" TextColor="Black" Margin="0,-55,0,0"/>
             </StackLayout>
