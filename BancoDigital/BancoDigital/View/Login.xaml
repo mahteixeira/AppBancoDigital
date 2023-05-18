@@ -22,6 +22,7 @@
 
                         <Label Text="Senha:" FontSize="17" Style="{StaticResource fonteComum}"/>
                         <Entry x:Name="txt_senha" FontSize="18" Style="{StaticResource fonteComum}" Margin="0,-15,0,0" IsPassword="True"/>
+                        <ImageButton x:Name="visivel" Clicked="visivel_Clicked" HeightRequest="28" HorizontalOptions="EndAndExpand" WidthRequest="40" BackgroundColor="#fff" Margin="0,-45,0,11" IsVisible="false"/>
 
                         <Button Text="ENTRAR" x:Name="btn_entrar" Style="{StaticResource fonteTitulos}" BackgroundColor="#EE83D7" CornerRadius="20" Clicked="btn_entrar_Clicked"/>
                         

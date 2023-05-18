@@ -4,9 +4,10 @@
              x:Class="BancoDigital.View.Inicio">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="DEU CERTO VC LOGOU!!!!!!!!!!!!!!!!!!!!!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Bem vindo(a) de volta," Style="{StaticResource fonteComum}" FontSize="20" Margin="10,0,0,0"/>
+            <Frame>
+                
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -22,6 +22,12 @@ namespace BancoDigital.View
             logo.Source = ImageSource.FromResource("BancoDigital.Imagens.logo.png");
             canto.Source = ImageSource.FromResource("BancoDigital.Imagens.canto.png");
             canto2.Source = ImageSource.FromResource("BancoDigital.Imagens.canto2.png");
+            visivel.Source = ImageSource.FromResource("BancoDigital.Imagens.olho.png");
+
+            if (txt_senha.Text != "")
+            {
+                visivel.IsVisible = true;
+            }
         }
 
         private async void btn_cadastro_Clicked(object sender, EventArgs e)
@@ -57,6 +63,21 @@ namespace BancoDigital.View
             catch (Exception ex)
             {
                 await DisplayAlert("Ops", ex.Message, "OK");
+            }
+        }
+
+        private void visivel_Clicked(object sender, EventArgs e)
+        {
+            bool ativado = false;
+
+            if (ativado == false)
+            {
+                ativado = true;
+                visivel.IsVisible = ativado;
+            } else if (ativado == true)
+            {
+                ativado = false;
+                visivel.IsVisible = ativado;
             }
         }
     }

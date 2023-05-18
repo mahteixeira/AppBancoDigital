@@ -14,6 +14,8 @@
     <None Remove="Imagens\canto.png" />
     <None Remove="Imagens\canto2.png" />
     <None Remove="Imagens\logo.png" />
+    <None Remove="Imagens\olho.png" />
+    <None Remove="Imagens\olhoFechado.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,6 +26,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Imagens\logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imagens\olho.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imagens\olhoFechado.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
