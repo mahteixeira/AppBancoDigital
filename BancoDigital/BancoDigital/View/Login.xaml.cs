@@ -35,7 +35,7 @@ namespace BancoDigital.View
             try
             {
 
-                await Navigation.PushAsync(new View.CadastroCorrentista());
+                await Navigation.PushAsync(new View.Cadastro.Cadastro_NOME());
 
             }
             catch (Exception ex)
