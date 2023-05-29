@@ -14,6 +14,8 @@ namespace BancoDigital.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Login : ContentPage
     {
+        bool ativado = false;
+        bool senha = false;
         public Login()
         {
             InitializeComponent();
@@ -24,10 +26,7 @@ namespace BancoDigital.View
             canto2.Source = ImageSource.FromResource("BancoDigital.Imagens.canto2.png");
             visivel.Source = ImageSource.FromResource("BancoDigital.Imagens.olho.png");
 
-            if (txt_senha.Text != "")
-            {
-                visivel.IsVisible = true;
-            }
+           
         }
 
         private async void btn_cadastro_Clicked(object sender, EventArgs e)
@@ -68,16 +67,18 @@ namespace BancoDigital.View
 
         private void visivel_Clicked(object sender, EventArgs e)
         {
-            bool ativado = false;
 
             if (ativado == false)
             {
                 ativado = true;
-                visivel.IsVisible = ativado;
+                txt_senha.IsPassword = ativado;
+                visivel.Source = ImageSource.FromResource("BancoDigital.Imagens.olho.png");
+
             } else if (ativado == true)
             {
                 ativado = false;
-                visivel.IsVisible = ativado;
+                txt_senha.IsPassword = ativado;
+                visivel.Source = ImageSource.FromResource("BancoDigital.Imagens.olhoFechado.png");
             }
         }
     }
