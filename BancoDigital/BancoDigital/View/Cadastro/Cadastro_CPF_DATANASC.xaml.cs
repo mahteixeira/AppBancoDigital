@@ -19,9 +19,34 @@ namespace BancoDigital.View.Cadastro
             canto.Source = ImageSource.FromResource("BancoDigital.Imagens.canto.png");
         }
 
-        private void btn_continuar_Clicked(object sender, EventArgs e)
+        private async void btn_continuar_Clicked(object sender, EventArgs e)
         {
-            Console.WriteLine(dtpck_data_nasc);
+            try
+            {
+                if (txt_cpf.Text == "")
+                {
+                    await DisplayAlert("Ops", "Informe seu CPF para que possamos continuar", "OK");
+                }
+                else
+                {
+
+                    if (dtpck_data_nasc.Date.Year <= 2005)
+                    {
+                        App.Globais._data_nasc = dtpck_data_nasc.Date;
+                        App.Globais._cpf = txt_cpf.Text;
+
+                        await Navigation.PushAsync(new View.Cadastro.Cadastro_SENHA());
+                    }
+                    else
+                    {
+                        await DisplayAlert("Sentimos muito!", "No momento apenas gerenciamos contas para maiores de idade, futuramente poderemos trabalhar para você.", "OK");
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                await DisplayAlert("Ops", ex.Message, "OK");
+            }
         }
     }
 }

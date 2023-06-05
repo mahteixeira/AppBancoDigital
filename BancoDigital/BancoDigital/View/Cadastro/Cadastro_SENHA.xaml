@@ -4,9 +4,24 @@
              x:Class="BancoDigital.View.Cadastro.Cadastro_SENHA">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Image x:Name="canto" HeightRequest="250" HorizontalOptions="Start" Margin="0,-30,0,0"/>
+            <StackLayout Margin="20,0">
+                <Label Text="Está quase tudo pronto, agora, vamos criar sua senha! Lembre-se de criar uma senha segura, afinal, é o seu dinheiro de que estamos falando!" FontSize="18" LineHeight="1.2" Style="{StaticResource fonteComum}" Margin="0,-100,0,70" TextColor="#666466"/>
+                <Label Text="Informe a senha:" FontSize="18" Style="{StaticResource fonteComum}"/>
+                <Entry x:Name="txt_senha" FontSize="18" Style="{StaticResource fonteComum}" BackgroundColor="#ededed"/>
+
+                <Label Text="Repita a senha:" FontSize="18" Style="{StaticResource fonteComum}" Margin="0,20,0,0"/>
+                <Entry x:Name="txt_repete_senha" FontSize="18" Style="{StaticResource fonteComum}" BackgroundColor="#ededed"/>
+
+                <Button Text="FINALIZAR CADASTRO"  x:Name="btn_continuar" Clicked="btn_continuar_Clicked" CornerRadius="20" TextColor="White" Style="{StaticResource fonteTitulos}" Margin="0,200,0,0">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="1,0">
+                            <GradientStop Color="#EE83D7" Offset="0.1" />
+                            <GradientStop Color="#BB4DCF" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

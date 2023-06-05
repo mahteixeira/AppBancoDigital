@@ -25,7 +25,7 @@ namespace BancoDigital.View.Cadastro
             { 
                 if (txt_nome.Text == "" | txt_sobrenome.Text == "")
                 {
-                    await DisplayAlert("Epa!", "Informe seu nome completo para continuar .", "OK");
+                    await DisplayAlert("Epa!", "Informe seu nome completo para continuar.", "OK");
                 } else
                 {
                     App.Globais._nome = txt_nome.Text;

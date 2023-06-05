@@ -15,7 +15,7 @@ namespace BancoDigital.View
     public partial class Login : ContentPage
     {
         bool ativado = false;
-        bool senha = false;
+
         public Login()
         {
             InitializeComponent();

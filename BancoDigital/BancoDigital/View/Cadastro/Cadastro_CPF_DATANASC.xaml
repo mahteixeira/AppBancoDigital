@@ -1,14 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BehaviorsPackSample"
+             xmlns:behaviorPack="clr-namespace:Xamarin.Forms.BehaviorValidationPack;assembly=Xamarin.Forms.BehaviorValidationPack"
              x:Class="BancoDigital.View.Cadastro.Cadastro_CPF_DATANASC">
     <ContentPage.Content>
         <StackLayout>
             <Image x:Name="canto" HeightRequest="250" HorizontalOptions="Start" Margin="0,0,0,0"/>
             <StackLayout Margin="20,0">
-                <Label Text="Vamos começar a fazer seu cadastro..." FontSize="18" Style="{StaticResource fonteComum}" Margin="0,-100,0,70" TextColor="#666466"/>
+                <Label Text="Bem vindo(a), agora precisaremos de algumas informações essenciais..." LineHeight="1.2" FontSize="18" Style="{StaticResource fonteComum}" Margin="0,-100,0,70" TextColor="#666466"/>
                 <Label Text="CPF:" FontSize="18" Style="{StaticResource fonteComum}"/>
-                <Entry x:Name="txt_nome" FontSize="18" Style="{StaticResource fonteComum}" BackgroundColor="#ededed" />
+                <Entry x:Name="txt_cpf" FontSize="18" Style="{StaticResource fonteComum}" BackgroundColor="#ededed" >
+                    <Entry.Behaviors>
+                        <behaviorPack:CPFValidationBehavior />
+                        <behaviorPack:MaskedBehavior Mask="XXX.XXX.XXX-XX" />
+                    </Entry.Behaviors>
+                </Entry>
 
                 <Label Text="Data de nascimento:" FontSize="18" Style="{StaticResource fonteComum}" Margin="0,20,0,0"/>
                 <DatePicker x:Name="dtpck_data_nasc" Format="dd/MM/yyyy" Style="{StaticResource fonteComum}" FontSize="18"  BackgroundColor="#ededed"/>
