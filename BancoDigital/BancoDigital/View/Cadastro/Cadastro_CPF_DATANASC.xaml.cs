@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BancoDigital.Model;
+using BancoDigital.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,23 +25,39 @@ namespace BancoDigital.View.Cadastro
         {
             try
             {
-                if (txt_cpf.Text == "")
+                if (txt_cpf.Text == null)
                 {
                     await DisplayAlert("Ops", "Informe seu CPF para que possamos continuar", "OK");
                 }
                 else
                 {
+                    string cpf = txt_cpf.Text;
 
-                    if (dtpck_data_nasc.Date.Year <= 2005)
-                    {
-                        App.Globais._data_nasc = dtpck_data_nasc.Date;
-                        App.Globais._cpf = txt_cpf.Text;
+              
+                        Correntista correntista = await DataServiceCorrentista.ConferirSeJaTemConta(new Correntista
+                        {
+                            cpf = cpf
+                        });
 
-                        await Navigation.PushAsync(new View.Cadastro.Cadastro_SENHA());
-                    }
-                    else
+                    if (correntista != null)
                     {
-                        await DisplayAlert("Sentimos muito!", "No momento apenas gerenciamos contas para maiores de idade, futuramente poderemos trabalhar para você.", "OK");
+                        App.Globais.deu_certo = false;
+                        App.Globais.feedback = "Esse CPF já está cadastrado em nosso sistema, tente fazer login ou entre em contato conosco.";
+                        await Navigation.PushAsync(new View.Feedback());
+                    } else
+                    {
+
+                        if (dtpck_data_nasc.Date.Year <= 2005)
+                        {
+                            App.Globais._data_nasc = dtpck_data_nasc.Date;
+                            App.Globais._cpf = txt_cpf.Text;
+
+                            await Navigation.PushAsync(new View.Cadastro.Cadastro_SENHA());
+                        }
+                        else
+                        {
+                            await DisplayAlert("Sentimos muito!", "No momento apenas gerenciamos contas para maiores de idade, futuramente poderemos trabalhar para você.", "OK");
+                        }
                     }
                 }
             }

@@ -20,7 +20,7 @@
                 <Label Text="Data de nascimento:" FontSize="18" Style="{StaticResource fonteComum}" Margin="0,20,0,0"/>
                 <DatePicker x:Name="dtpck_data_nasc" Format="dd/MM/yyyy" Style="{StaticResource fonteComum}" FontSize="18"  BackgroundColor="#ededed"/>
                 
-                <Button Text="CONTINUAR"  x:Name="btn_continuar" Clicked="btn_continuar_Clicked" CornerRadius="20" TextColor="White" Style="{StaticResource fonteTitulos}" Margin="0,300,0,0">
+                <Button Text="CONTINUAR"  x:Name="btn_continuar" Clicked="btn_continuar_Clicked" CornerRadius="20" TextColor="White" Style="{StaticResource fonteTitulos}" Margin="0,270,0,0">
                     <Button.Background>
                         <LinearGradientBrush EndPoint="1,0">
                             <GradientStop Color="#EE83D7" Offset="0.1" />

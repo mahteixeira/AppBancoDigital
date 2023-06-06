@@ -17,6 +17,7 @@ namespace BancoDigital.View.Cadastro
         public Cadastro_SENHA()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
             canto.Source = ImageSource.FromResource("BancoDigital.Imagens.canto.png");
         }
 
@@ -24,25 +25,33 @@ namespace BancoDigital.View.Cadastro
         {
             try
             {
-                if (txt_senha.Text != txt_repete_senha.Text)
+                if (txt_senha.Text == null | txt_repete_senha.Text == null)
                 {
-                    await DisplayAlert("Epa!", "As senhas não coincidem.", "OK");
-                } else
+                    await DisplayAlert("Epa!", "Precisamos confirmar uma senha para continuar.", "OK");
+                }
+                else
                 {
-                    App.Globais._senha = txt_senha.Text;
-
-                    await DataServiceCorrentista.Cadastrar(new Correntista
+                    if (txt_senha.Text != txt_repete_senha.Text)
                     {
-                        nome = App.Globais._nome,
-                        data_nasc = App.Globais._data_nasc,
-                        cpf = App.Globais._cpf,
-                        senha = App.Globais._senha
-                    });
+                        await DisplayAlert("Epa!", "As senhas não coincidem.", "OK");
+                    }
+                    else
+                    {
+                        App.Globais._senha = txt_senha.Text;
+
+                        await DataServiceCorrentista.Cadastrar(new Correntista
+                        {
+                            nome = App.Globais._nome,
+                            data_nasc = App.Globais._data_nasc,
+                            cpf = App.Globais._cpf,
+                            senha = App.Globais._senha
+                        });
 
 
-                    App.Globais.deu_certo = true;
-                    App.Globais.feedback = "Você foi cadastrado(a) com sucesso!! Clique em continuar e vamos criar uma conta para você!";
-                    await Navigation.PushAsync(new View.Feedback());
+                        App.Globais.deu_certo = true;
+                        App.Globais.feedback = "Você foi cadastrado(a) com sucesso!! Clique em continuar e vamos criar uma conta para você!";
+                        await Navigation.PushAsync(new View.Feedback());
+                    }
                 }
             }
             catch 

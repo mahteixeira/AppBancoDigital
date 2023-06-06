@@ -33,6 +33,15 @@ namespace BancoDigital.Service
             return obj as Correntista;
         }
 
+        public static async Task<Correntista> ConferirSeJaTemConta(Correntista c)
+        {
+            var json_to_send = JsonConvert.SerializeObject(c);
+
+            string json = await DataService.PostDataToService(json_to_send, "/correntista/conferir");
+
+            return JsonConvert.DeserializeObject<Correntista>(json);
+        }
+
         public static async Task<Correntista> Login(Correntista c)
         {
             var json_to_send = JsonConvert.SerializeObject(c);

@@ -3,9 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BancoDigital.View.Feedback" Background="#fff">
     <ContentPage.Content>
-        <StackLayout VerticalOptions="CenterAndExpand">
-            <Image x:Name="certo_erro" HeightRequest="100"/>
-            <Label Text="" Style="{StaticResource fonteComum}" x:Name="mensagem" LineHeight="1.2" HorizontalTextAlignment="Center" FontSize="18" Margin="20"/>
+        <StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Image x:Name="certo_erro" HeightRequest="100"/>
+                <Label Text="" Style="{StaticResource fonteComum}" x:Name="mensagem" LineHeight="1.2" HorizontalTextAlignment="Center" FontSize="18" Margin="20"/>
+            </StackLayout>
+            <Button Text="CONTINUAR"  x:Name="btn_continuar" Clicked="btn_continuar_Clicked" CornerRadius="20" TextColor="White" Style="{StaticResource fonteTitulos}" Margin="10,-50,10,50">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="1,0">
+                        <GradientStop Color="#EE83D7" Offset="0.1" />
+                        <GradientStop Color="#BB4DCF" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

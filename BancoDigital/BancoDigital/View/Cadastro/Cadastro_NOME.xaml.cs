@@ -23,7 +23,7 @@ namespace BancoDigital.View.Cadastro
         {
             try
             { 
-                if (txt_nome.Text == "" | txt_sobrenome.Text == "")
+                if (txt_nome.Text == null | txt_sobrenome.Text == null)
                 {
                     await DisplayAlert("Epa!", "Informe seu nome completo para continuar.", "OK");
                 } else

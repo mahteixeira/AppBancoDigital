@@ -15,6 +15,7 @@ namespace BancoDigital.View
         public Feedback()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
 
             if (App.Globais.deu_certo == true)
             {
@@ -25,6 +26,11 @@ namespace BancoDigital.View
             }
 
             mensagem.Text = App.Globais.feedback;
+        }
+
+        private void btn_continuar_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }
