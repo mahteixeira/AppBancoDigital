@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BancoDigital.View.Feedback" Background="#fff">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Image x:Name="certo_erro" HeightRequest="100"/>
+            <Label Text="" Style="{StaticResource fonteComum}" x:Name="mensagem" LineHeight="1.2" HorizontalTextAlignment="Center" FontSize="18" Margin="20"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

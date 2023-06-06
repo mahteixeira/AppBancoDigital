@@ -11,14 +11,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Imagens\cancelar.png" />
     <None Remove="Imagens\canto.png" />
     <None Remove="Imagens\canto2.png" />
     <None Remove="Imagens\logo.png" />
     <None Remove="Imagens\olho.png" />
     <None Remove="Imagens\olhoFechado.png" />
+    <None Remove="Imagens\verificar.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Imagens\cancelar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Imagens\canto.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -32,6 +37,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Imagens\olhoFechado.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imagens\verificar.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
@@ -57,6 +65,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\Cadastro\Cadastro_SENHA.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\Feedback.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\PgInicial.xaml">

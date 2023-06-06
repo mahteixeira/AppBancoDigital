@@ -21,6 +21,8 @@ namespace BancoDigital
             public static string _cpf;
             public static DateTime _data_nasc;
             public static string _senha;
+            public static string feedback;
+            public static bool deu_certo;
         }
         protected override void OnStart()
         {

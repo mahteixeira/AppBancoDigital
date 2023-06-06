@@ -40,13 +40,16 @@ namespace BancoDigital.View.Cadastro
                     });
 
 
-                    await DisplayAlert("Sucesso!", "Você foi cadastrado.", "OK");
-                    await Navigation.PushAsync(new View.Login());
+                    App.Globais.deu_certo = true;
+                    App.Globais.feedback = "Você foi cadastrado(a) com sucesso!! Clique em continuar e vamos criar uma conta para você!";
+                    await Navigation.PushAsync(new View.Feedback());
                 }
             }
-            catch (Exception ex) 
+            catch 
             {
-                await DisplayAlert("Ops", ex.Message, "OK");
+                App.Globais.deu_certo = false;
+                App.Globais.feedback = "Sentimos muito, mas algo em nosso sistema deu errado :(( Tente novamente dentro de algum tempo.";
+
             }
         }
     }
