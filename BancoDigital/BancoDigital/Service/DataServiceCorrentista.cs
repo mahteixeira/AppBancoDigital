@@ -39,6 +39,8 @@ namespace BancoDigital.Service
 
             string json = await DataService.PostDataToService(json_to_send, "/correntista/conferir");
 
+            Console.WriteLine(json);    
+
             return JsonConvert.DeserializeObject<Correntista>(json);
         }
 

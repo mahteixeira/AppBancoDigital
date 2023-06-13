@@ -39,7 +39,8 @@ namespace BancoDigital.View.Cadastro
                             cpf = cpf
                         });
 
-                    if (correntista == null)
+
+                    if (correntista.cpf != null)
                     {
                         App.Globais.deu_certo = false;
                         App.Globais.feedback = "Esse CPF já está cadastrado em nosso sistema, tente fazer login ou entre em contato conosco.";
