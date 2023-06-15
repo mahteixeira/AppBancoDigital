@@ -31,13 +31,10 @@ namespace BancoDigital.View.Cadastro
                 }
                 else
                 {
-                    string cpf = txt_cpf.Text;
-
-              
                         Correntista correntista = await DataServiceCorrentista.ConferirSeJaTemConta(new Correntista
                         {
-                            cpf = cpf
-                        });
+                            cpf = txt_cpf.Text
+                });
 
 
                     if (correntista.cpf != null)

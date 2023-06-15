@@ -47,7 +47,7 @@ namespace BancoDigital.View.Cadastro
                             senha = App.Globais._senha
                         });
 
-
+                        
                         App.Globais.deu_certo = true;
                         App.Globais.feedback = "Você foi cadastrado(a) com sucesso!! Clique em continuar e vamos criar uma conta para você!";
                         await Navigation.PushAsync(new View.Feedback());

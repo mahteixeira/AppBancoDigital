@@ -28,9 +28,9 @@ namespace BancoDigital.View
             mensagem.Text = App.Globais.feedback;
         }
 
-        private void btn_continuar_Clicked(object sender, EventArgs e)
+        private async void btn_continuar_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new View.Feedback());
         }
     }
 }
