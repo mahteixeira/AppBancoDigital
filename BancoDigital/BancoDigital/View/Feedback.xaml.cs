@@ -30,7 +30,7 @@ namespace BancoDigital.View
 
         private async void btn_continuar_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new View.Feedback());
+            await Navigation.PushAsync(new View.Login());
         }
     }
 }

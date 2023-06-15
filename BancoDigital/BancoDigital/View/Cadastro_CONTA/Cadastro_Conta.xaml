@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BehaviorsPackSample"
+             xmlns:behaviorPack="clr-namespace:Xamarin.Forms.BehaviorValidationPack;assembly=Xamarin.Forms.BehaviorValidationPack"
+             x:Class="BancoDigital.View.Cadastro_CONTA.Cadastro_Conta">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image x:Name="canto" HeightRequest="250" HorizontalOptions="Start" Margin="0,0,0,0"/>
+        <StackLayout Margin="20,0">
+           
+                <Label Text="Vamos criar a sua conta, lembre-se de fazer isso em um local seguro! Primeiro selecione o tipo de conta que deseja:" LineHeight="1.2" FontSize="18" Style="{StaticResource fonteComum}" Margin="0,-40,0,70" TextColor="#666466"/>
+
+            <Picker x:Name="pck_conta" BackgroundColor="#ededed" Title="Selecione..." Style="{StaticResource fonteComum}" Margin="0,-40,0,0">
+                <Picker.Items>
+                    <x:String>Corrente</x:String>
+                    <x:String>Poupança</x:String>
+                </Picker.Items>
+            </Picker>
+
+                <Label Text="Crie uma senha:" FontSize="18" Style="{StaticResource fonteComum}"  Margin="0,30,0,0"/>
+            <Entry x:Name="txt_senha_conta" FontSize="18" Style="{StaticResource fonteComum}" BackgroundColor="#ededed"/>
+            <CheckBox x:Name="senha_igual" IsChecked="false" />
+                <Label Text="Desejo que minha conta tenha a mesma senha que já inseri." TextColor="#525252"  Margin="30,-40,0,0"/>
+
+                <Button Text="Continuar"  x:Name="btn_continuar" Clicked="btn_continuar_Clicked" CornerRadius="20" TextColor="White" Style="{StaticResource fonteTitulos}" Margin="0,200,0,0">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="1,0">
+                            <GradientStop Color="#EE83D7" Offset="0.1" />
+                            <GradientStop Color="#BB4DCF" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+            </StackLayout>
+       </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

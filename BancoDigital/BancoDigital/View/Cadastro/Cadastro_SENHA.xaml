@@ -13,7 +13,7 @@
                 <Label Text="Repita a senha:" FontSize="18" Style="{StaticResource fonteComum}" Margin="0,20,0,0"/>
                 <Entry x:Name="txt_repete_senha" FontSize="18" Style="{StaticResource fonteComum}" BackgroundColor="#ededed"/>
 
-                <Button Text="FINALIZAR CADASTRO"  x:Name="btn_continuar" Clicked="btn_continuar_Clicked" CornerRadius="20" TextColor="White" Style="{StaticResource fonteTitulos}" Margin="0,230,0,0">
+                <Button Text="FINALIZAR CADASTRO"  x:Name="btn_continuar" Clicked="btn_continuar_Clicked" CornerRadius="20" TextColor="White" Style="{StaticResource fonteTitulos}" Margin="0,220,0,0">
                     <Button.Background>
                         <LinearGradientBrush EndPoint="1,0">
                             <GradientStop Color="#EE83D7" Offset="0.1" />

@@ -23,7 +23,8 @@ namespace BancoDigital
             public static string _senha;
             public static string feedback;
             public static bool deu_certo;
-            public static Page mudar_pagina; 
+            public static string _tipo_conta;
+            public static int _id_correntista;
         }
         protected override void OnStart()
         {
