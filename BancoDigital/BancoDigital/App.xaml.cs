@@ -7,6 +7,9 @@ namespace BancoDigital
 {
     public partial class App : Application
     {
+
+        public static Model.Correntista DadosCorrentista { get; set; }
+
         public App()
         {
             InitializeComponent();
@@ -25,6 +28,8 @@ namespace BancoDigital
             public static bool deu_certo;
             public static string _tipo_conta;
             public static int _id_correntista;
+            public static string pra_onde;
+
         }
         protected override void OnStart()
         {

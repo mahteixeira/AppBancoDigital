@@ -4,7 +4,7 @@
              x:Class="BancoDigital.View.Inicio">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Bem vindo(a) de volta," Style="{StaticResource fonteComum}" FontSize="20" Margin="10,0,0,0"/>
+            <Label x:Name="txt_correntista" Style="{StaticResource fonteComum}" FontSize="20" Margin="10,0,0,0"/>
             <Frame>
                 
             </Frame>

@@ -15,6 +15,8 @@ namespace BancoDigital.View
         public Inicio()
         {
             InitializeComponent();
+
+            txt_correntista.Text ="Bem vindo(a)" + App.DadosCorrentista.nome;
         }
     }
 }

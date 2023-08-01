@@ -12,7 +12,7 @@ namespace BancoDigital.View.Cadastro_CONTA
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Numero_Conta : ContentPage
     {
-\
+        
 
         public Numero_Conta()
         {

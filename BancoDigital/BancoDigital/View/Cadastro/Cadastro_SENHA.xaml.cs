@@ -48,7 +48,16 @@ namespace BancoDigital.View.Cadastro
                         });
 
                         App.Globais.deu_certo = true;
-                        App.Globais.feedback = "Você foi cadastrado(a) com sucesso!! Clique em continuar e vamos criar uma conta para você!";
+
+                        Correntista correntista = await DataServiceCorrentista.Login(new Correntista
+                        {
+                            cpf = App.Globais._cpf,
+                            senha = App.Globais._senha
+                        });
+
+                        await Navigation.PushAsync(new View.Inicio());
+                        App.Globais.pra_onde = "inicio";
+                        App.Globais.feedback = "Você foi cadastrado(a) com sucesso!! Agora você faz parte da nossa família <3";
                         await Navigation.PushAsync(new View.Feedback());
                     }
                 }
@@ -56,6 +65,7 @@ namespace BancoDigital.View.Cadastro
             catch 
             {
                 App.Globais.deu_certo = false;
+                App.Globais.pra_onde = "login";
                 App.Globais.feedback = "Sentimos muito, mas algo em nosso sistema deu errado :(( Tente novamente dentro de algum tempo.";
 
             }
