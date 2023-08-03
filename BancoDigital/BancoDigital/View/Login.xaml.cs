@@ -48,15 +48,25 @@ namespace BancoDigital.View
             string cpf = txt_cpf.Text;
             string senha = txt_senha.Text;
 
+
             try
             {
-                Correntista correntista = await DataServiceCorrentista.Login(new Correntista
+
+                Correntista c = await DataServiceCorrentista.Login(new Model.Correntista
                 {
-                    cpf = cpf,
-                    senha = senha
+                    cpf = txt_cpf.Text,
+                    senha = txt_senha.Text,
                 });
 
-                await Navigation.PushAsync(new View.Inicio());
+                if (c.id != null)
+                {
+                    App.DadosCorrentista = c;
+                    await Navigation.PushAsync(new View.Inicio());
+                    //App.Current.Properties.Add("usuario_logado", c);
+
+                }
+                else
+                    throw new Exception("Dados de login inválidos.");
 
             }
             catch (Exception ex)

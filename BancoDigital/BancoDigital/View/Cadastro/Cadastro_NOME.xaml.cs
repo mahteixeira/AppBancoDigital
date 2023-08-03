@@ -23,13 +23,14 @@ namespace BancoDigital.View.Cadastro
         {
             try
             { 
+                string nome = txt_nome.Text;
+                string sobrenome = txt_sobrenome.Text;  
                 if (txt_nome.Text == null | txt_sobrenome.Text == null)
                 {
                     await DisplayAlert("Epa!", "Informe seu nome completo para continuar.", "OK");
                 } else
                 {
-                    App.Globais._nome = txt_nome.Text;
-                    App.Globais._sobrenome = txt_sobrenome.Text;
+                    App.Globais._nome = nome + " " + sobrenome;
 
                     await Navigation.PushAsync(new View.Cadastro.Cadastro_CPF_DATANASC());
                 }
