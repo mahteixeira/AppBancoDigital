@@ -9,17 +9,17 @@ namespace BancoDigital
     {
 
         public static Model.Correntista DadosCorrentista { get; set; }
+        public static Model.Conta DadosConta { get; set; }
 
         public App()
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new View.Login());
 
             if (Properties.ContainsKey("usuario_logado"))
                 MainPage = new NavigationPage(new View.Inicio());
             else
-                MainPage = new View.Login();
+                MainPage = new NavigationPage(new View.Login());
         }
 
         public static class Globais

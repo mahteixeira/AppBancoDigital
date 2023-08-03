@@ -4,11 +4,27 @@
              x:Class="BancoDigital.View.Inicio">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Bem vindo(a)" Style="{StaticResource fonteComum}" FontSize="20" Margin="10,0,0,0"/>
-            <Label x:Name="txt_correntista" Style="{StaticResource fonteTitulos}" TextColor="#000" FontSize="20" Margin="0,0,0,0"/>
-            <Frame>
-                
+            <Label Text="Bem vindo(a)" Style="{StaticResource fonteComum}" FontSize="15" Margin="10,0,0,0"/>
+            <Label x:Name="txt_correntista" Style="{StaticResource fonteTitulos}" TextColor="#000" FontSize="30" Margin="10,-10,0,0"/>
+
+
+           <Frame BorderColor="LightGray"
+           HasShadow="True"
+           CornerRadius="12"
+           HeightRequest="135"
+           Margin="10,0,10,0">
+                <Frame.Background>
+                    <!-- StartPoint defaults to (0,0) -->
+                    <LinearGradientBrush EndPoint="1,0">
+                        <GradientStop Color="#BB4DCF" Offset="0.1" />
+                        <GradientStop Color="#EE83D7" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Frame.Background>
+           
+               <Label x:Name="txt_saldo" Style="{StaticResource fonteTitulos}" FontSize="30" TextColor="#fff" Margin="0,0,0,0"/>
+           
             </Frame>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
