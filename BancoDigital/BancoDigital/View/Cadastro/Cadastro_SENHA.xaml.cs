@@ -49,7 +49,8 @@ namespace BancoDigital.View.Cadastro
 
                         App.Globais.deu_certo = true;
 
-                        
+                        App.Globais.feedback = "Você foi cadastrado(a) com sucesso!! Agora você faz parte da nossa família <3";
+                        App.Globais.pra_onde = "inicio";
                         await Navigation.PushAsync(new View.Feedback());
 
                         /*

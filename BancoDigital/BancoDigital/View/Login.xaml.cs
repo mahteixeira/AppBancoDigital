@@ -61,7 +61,7 @@ namespace BancoDigital.View
                 if (c.id != null)
                 {
                     App.DadosCorrentista = c;
-                    await Navigation.PushAsync(new View.Inicio());
+                    await Navigation.PushAsync(new View.lista());
                     //App.Current.Properties.Add("usuario_logado", c);
 
                 }

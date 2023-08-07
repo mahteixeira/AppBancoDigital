@@ -20,10 +20,10 @@ namespace BancoDigital.View
             string[] resultsArray = explode(" ", App.DadosCorrentista.nome);
             string Nome = resultsArray[0];
 
-            string Saldo = App.DadosConta.saldo.ToString();
+            //string Saldo = App.DadosConta.saldo.ToString();
 
             txt_correntista.Text = Nome;
-            txt_saldo.Text = "R$ " + Saldo;
+            //txt_saldo.Text = "R$ " + Saldo;
         }
 
         public static string[] explode(string separator, string source)

@@ -6,7 +6,7 @@
         <StackLayout>
             <StackLayout VerticalOptions="CenterAndExpand">
                 <Image x:Name="certo_erro" HeightRequest="100"/>
-                <Label Text="" Style="{StaticResource fonteComum}" x:Name="mensagem" LineHeight="1.2" HorizontalTextAlignment="Center" FontSize="18" Margin="20"/>
+                <Label Style="{StaticResource fonteComum}" x:Name="mensagem" LineHeight="1.2" HorizontalTextAlignment="Center" FontSize="18" Margin="20"/>
             </StackLayout>
             <Button Text="CONTINUAR"  x:Name="btn_continuar" Clicked="btn_continuar_Clicked" CornerRadius="20" TextColor="White" Style="{StaticResource fonteTitulos}" Margin="10,-50,10,50">
                 <Button.Background>

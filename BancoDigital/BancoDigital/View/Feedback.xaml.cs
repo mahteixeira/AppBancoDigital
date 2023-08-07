@@ -30,14 +30,7 @@ namespace BancoDigital.View
 
         private async void btn_continuar_Clicked(object sender, EventArgs e)
         {
-            if (App.Globais.pra_onde == "inicio")
-                {
-                    await Navigation.PushAsync(new View.Inicio());
-                } 
-                else if (App.Globais.pra_onde == "login")
-                    {
-                        await Navigation.PushAsync(new View.Login());
-                    }
+            await Navigation.PushAsync(new View.Login());
         }
     }
 }

@@ -9,7 +9,7 @@ namespace BancoDigital
     {
 
         public static Model.Correntista DadosCorrentista { get; set; }
-        public static Model.Conta DadosConta { get; set; }
+        //public static Model.Conta DadosConta { get; set; }
 
         public App()
         {
@@ -34,7 +34,6 @@ namespace BancoDigital
             public static string _tipo_conta;
             public static int _id_correntista;
             public static string pra_onde;
-
         }
         protected override void OnStart()
         {
