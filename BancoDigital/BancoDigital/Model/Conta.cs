@@ -11,7 +11,7 @@ namespace BancoDigital.Model
         public int numero { get; set; }
         public string tipo { get; set; }
         public string senha { get; set; }
-        public int id_correntista { get; set;}
+        public int? id_correntista { get; set;}
         public double saldo { get; set; }
         public double limite { get; set; }
     }

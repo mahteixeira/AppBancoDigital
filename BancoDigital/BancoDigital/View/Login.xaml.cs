@@ -65,8 +65,10 @@ namespace BancoDigital.View
                     //App.Current.Properties.Add("usuario_logado", c);
 
                 }
-                else
-                    throw new Exception("Dados de login inválidos.");
+                else {
+                    throw new Exception("Dados de login inválidos."); 
+                }
+
 
             }
             catch (Exception ex)
