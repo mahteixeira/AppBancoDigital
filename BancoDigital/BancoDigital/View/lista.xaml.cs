@@ -16,6 +16,13 @@ namespace BancoDigital.View
         public lista()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
+            List<Conta> arr_contas = App.DadosCorrentista.lista_conta; 
+
+            lst_contas.ItemsSource = arr_contas;
+            logo.Source = ImageSource.FromResource("BancoDigital.Imagens.logo.png");
+
+
         }
     }
 }
