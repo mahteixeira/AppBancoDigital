@@ -15,6 +15,7 @@
          which is used to tint widgets -->
 	  <item name="colorAccent">#EE83D7</item>
 	  <item name="android:datePickerDialogTheme">@style/AppCompatDialogStyle</item>
+	  <item name="android:colorActivatedHighlight">@android:color/transparent</item>
 
   </style>
 	<style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
