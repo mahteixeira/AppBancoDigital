@@ -24,5 +24,10 @@ namespace BancoDigital.View
 
 
         }
+
+        private void Btn_EntrarConta_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -11,17 +11,14 @@ namespace BancoDigital.Service
 {
     public class DataServiceConta : DataService
     {
-
-        public static async Task<List<Conta>> GetContasByIdCorrentista(int id_correntista)
+        public static async Task<Conta> Login(Conta co)
         {
-            string json = await DataService.GetDataFromService("/conta/listar?id_correntista=" + id_correntista);
+            var json_to_send = JsonConvert.SerializeObject(co);
 
-            List<Conta> arr_contas = JsonConvert.DeserializeObject<List<Conta>>(json);
+            string json = await DataService.PostDataToService(json_to_send, "/conta/entrar");
 
-            
-            Console.WriteLine(arr_contas.Count);
-            return arr_contas;
+            return JsonConvert.DeserializeObject<Conta>(json);
         }
-        
+
     }
 }

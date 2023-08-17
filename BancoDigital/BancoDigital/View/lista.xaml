@@ -13,6 +13,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
+                           
                             <Grid ColumnDefinitions="Auto" RowDefinitions="Auto">
                                 <StackLayout WidthRequest="400" BackgroundColor="#e8e6e4" Padding="0,10,0,10" Margin="0,0,0,10">
                                     <Label Grid.Row="0" Grid.Column="0" x:Name="txt_numero" Text="{Binding numero}" Style="{StaticResource fonteTitulos}" TextColor="#000" FontSize="25" Margin="10,0,0,0"/>
