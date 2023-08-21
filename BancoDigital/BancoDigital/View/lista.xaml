@@ -6,14 +6,13 @@
         <StackLayout>
 
             <ActivityIndicator x:Name="carregando" IsRunning="False"/>
-
+            <Image x:Name="logo" Margin="0,-50,0,20" WidthRequest="150"/>
             <Label Text="Selecione uma conta" FontSize="22" Style="{StaticResource fonteComum}" Margin="10,0,0,0" />
 
             <ListView x:Name="lst_contas" RowHeight="70" Margin="10,5,10,5" VerticalOptions="CenterAndExpand">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                           
                             <Grid ColumnDefinitions="Auto" RowDefinitions="Auto">
                                 <StackLayout WidthRequest="400" BackgroundColor="#e8e6e4" Padding="0,10,0,10" Margin="0,0,0,10">
                                     <Label Grid.Row="0" Grid.Column="0" x:Name="txt_numero" Text="{Binding numero}" Style="{StaticResource fonteTitulos}" TextColor="#000" FontSize="25" Margin="10,0,0,0"/>
@@ -24,7 +23,11 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Image x:Name="logo" Margin="0,100,0,30" WidthRequest="200"/>
+            
+            <Button Text="Criar nova conta" x:Name="conta_criar" Clicked="conta_criar_Clicked" Style="{StaticResource fonteTitulos}" BackgroundColor="#fff"  TextColor="#EE83D7" BorderWidth="2" Margin="50,0,50,-122" HeightRequest="35" VerticalOptions="CenterAndExpand"/>
+
+            
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

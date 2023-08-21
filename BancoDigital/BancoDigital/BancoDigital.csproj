@@ -70,9 +70,6 @@
     <EmbeddedResource Update="View\Cadastro_CONTA\Cadastro_Conta.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\Cadastro_CONTA\Numero_Conta.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="View\Feedback.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

@@ -25,9 +25,10 @@ namespace BancoDigital.View
 
         }
 
-        private void Btn_EntrarConta_Clicked(object sender, EventArgs e)
-        {
 
+        private async void conta_criar_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.Cadastro_CONTA.Cadastro_Conta());
         }
     }
 }

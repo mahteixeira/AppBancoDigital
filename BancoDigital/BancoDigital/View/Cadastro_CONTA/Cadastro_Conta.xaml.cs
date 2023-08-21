@@ -56,7 +56,7 @@ namespace BancoDigital.View.Cadastro_CONTA
                     senha_conta = txt_senha_conta.Text;
                     App.Globais._senha = senha_conta;
                     
-                    await Navigation.PushAsync(new View.Cadastro_CONTA.Numero_Conta());
+                    //await Navigation.PushAsync(new View.Cadastro_CONTA.Numero_Conta());
 
 
                 }
