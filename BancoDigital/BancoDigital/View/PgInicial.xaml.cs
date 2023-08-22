@@ -23,7 +23,7 @@ namespace BancoDigital.View
             //string Saldo = App.DadosConta.saldo.ToString();
 
             txt_correntista.Text = Nome;
-            //txt_saldo.Text = "R$ " + Saldo;
+           
         }
 
         public static string[] explode(string separator, string source)

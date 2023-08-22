@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BancoDigital.Model;
+using BancoDigital.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -55,7 +57,24 @@ namespace BancoDigital.View.Cadastro_CONTA
 
                     senha_conta = txt_senha_conta.Text;
                     App.Globais._senha = senha_conta;
+
+                    Random random = new Random();
+                    string n_pt1 = random.Next(10000000, 99999999).ToString();
+                    string n_pt2 = random.Next(0, 9).ToString();
+
+                    string numero = n_pt1 + "-" + n_pt2;
                     
+
+                    await DataServiceConta.Cadastrar(new Conta
+                    {
+                        numero = numero,
+                        tipo = tipo_conta,
+                        senha = senha_conta,
+                        id_correntista = App.DadosCorrentista.id,
+                        saldo = 0,
+                        limite = 0
+                    });
+
                     //await Navigation.PushAsync(new View.Cadastro_CONTA.Numero_Conta());
 
 

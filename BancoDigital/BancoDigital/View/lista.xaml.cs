@@ -11,7 +11,7 @@ using Xamarin.Forms.Xaml;
 namespace BancoDigital.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class lista : ContentPage
+    public partial class lista : ContentPage 
     {
         public lista()
         {
@@ -29,6 +29,15 @@ namespace BancoDigital.View
         private async void conta_criar_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new View.Cadastro_CONTA.Cadastro_Conta());
+        }
+
+        private async void lst_contas_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            Conta conta_selecionada = (Conta)lst_contas.SelectedItem;
+
+            Conta co = await DataServiceConta.SelectConta(conta_selecionada.numero);
+
+            Console.WriteLine("Conta selecionada = " + co.numero);
         }
     }
 }
