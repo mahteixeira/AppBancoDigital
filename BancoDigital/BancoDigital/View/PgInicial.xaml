@@ -2,29 +2,34 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BancoDigital.View.Inicio">
+
+    <ContentPage.Background>
+        <!-- StartPoint defaults to (0,0) -->
+        <LinearGradientBrush EndPoint="1,0">
+            <GradientStop Color="#BB4DCF" Offset="0.1" />
+            <GradientStop Color="#EE83D7" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Bem vindo(a)" Style="{StaticResource fonteComum}" FontSize="15" Margin="10,0,0,0"/>
-            <Label x:Name="txt_correntista" Style="{StaticResource fonteTitulos}" TextColor="#000" FontSize="30" Margin="10,-10,0,0"/>
+            <Grid RowDefinitions="*" ColumnDefinitions="*,*,*">
+                <ImageButton x:Name="btn_voltar" Clicked="btn_voltar_Clicked" Grid.Column="0" BackgroundColor="Transparent" WidthRequest="0" Scale="0.7" Margin="-80,35,10,0"/>
+                <Label x:Name="txt_correntista" Style="{StaticResource fonteTitulos}" TextColor="#fff" FontSize="20" Margin="0,32,-80,0" Grid.Column="1" HorizontalTextAlignment="End"/>
+                <ImageButton x:Name="btn_perfil" Clicked="btn_perfil_Clicked" Grid.Column="2" WidthRequest="20" BackgroundColor="Transparent" Margin="0,30,-70,-5"/>
+            </Grid>
+            <Label Text="Seu saldo:" Style="{StaticResource fonteComum}" FontSize="17" Margin="12,20,0,0" TextColor="#fff"/>
+            <Label x:Name="txt_saldo" Text="R$ 0,00" Style="{StaticResource fonteTitulos}" FontSize="50" TextColor="#fff" Margin="10,-10,0,0"/>
 
-
-           <Frame BorderColor="LightGray"
-           HasShadow="True"
-           CornerRadius="12"
-           HeightRequest="135"
-           Margin="10,0,10,0">
-                <Frame.Background>
-                    <!-- StartPoint defaults to (0,0) -->
-                    <LinearGradientBrush EndPoint="1,0">
-                        <GradientStop Color="#BB4DCF" Offset="0.1" />
-                        <GradientStop Color="#EE83D7" Offset="1.0" />
-                    </LinearGradientBrush>
-                </Frame.Background>
-           
-               <Label x:Name="txt_saldo" Style="{StaticResource fonteTitulos}" FontSize="30" TextColor="#fff" Margin="0,0,0,0"/>
-           
+            <Frame Background="#fff" HeightRequest="700" Margin="0,20,0,-50" CornerRadius="45">
+                <StackLayout>
+                     <Grid RowDefinitions="*" ColumnDefinitions="*,*,*,*" Margin="0,20,0,0">
+                        <ImageButton x:Name="btn_extrato" Clicked="btn_extrato_Clicked" Grid.Column="0" Style="{StaticResource btn_inicio}"/>
+                        <ImageButton Grid.Column="1" Style="{StaticResource btn_inicio}"/>
+                        <ImageButton Grid.Column="2" Style="{StaticResource btn_inicio}"/>
+                        <ImageButton Grid.Column="3" Style="{StaticResource btn_inicio}"/>
+                    </Grid>
+                </StackLayout>
             </Frame>
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

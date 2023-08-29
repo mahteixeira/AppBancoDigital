@@ -15,11 +15,14 @@ namespace BancoDigital
         {
             InitializeComponent();
 
-
+            /*
             if (Properties.ContainsKey("usuario_logado"))
                 MainPage = new NavigationPage(new View.Inicio());
             else
                 MainPage = new NavigationPage(new View.Login());
+            */
+
+            MainPage = new NavigationPage(new View.Inicio());
         }
 
         public static class Globais

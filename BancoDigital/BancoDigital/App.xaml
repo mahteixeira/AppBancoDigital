@@ -22,5 +22,13 @@
             </Setter>
             <Setter Property="TextColor" Value="Black"/>
         </Style>
+
+        <Style x:Key="btn_inicio" TargetType="ImageButton">
+            <Setter Property="BackgroundColor" Value="#F3F3F3"/>
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="BorderWidth" Value="10"/>
+            <Setter Property="BorderColor" Value="#F3F3F3"/>
+            <Setter Property="HeightRequest" Value="80"/>
+        </Style>
     </Application.Resources>
 </Application>

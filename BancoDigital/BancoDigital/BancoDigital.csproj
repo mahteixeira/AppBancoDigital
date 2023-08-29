@@ -14,10 +14,13 @@
     <None Remove="Imagens\cancelar.png" />
     <None Remove="Imagens\canto.png" />
     <None Remove="Imagens\canto2.png" />
+    <None Remove="Imagens\extrato.png" />
     <None Remove="Imagens\logo.png" />
     <None Remove="Imagens\olho.png" />
     <None Remove="Imagens\olhoFechado.png" />
+    <None Remove="Imagens\perfil.png" />
     <None Remove="Imagens\verificar.png" />
+    <None Remove="Imagens\voltar.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,6 +33,9 @@
     <EmbeddedResource Include="Imagens\canto2.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Imagens\extrato.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Imagens\logo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -39,7 +45,13 @@
     <EmbeddedResource Include="Imagens\olhoFechado.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Imagens\perfil.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Imagens\verificar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imagens\voltar.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

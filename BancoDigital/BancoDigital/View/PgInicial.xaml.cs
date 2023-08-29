@@ -16,13 +16,19 @@ namespace BancoDigital.View
         public Inicio()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
+            btn_voltar.Source = ImageSource.FromResource("BancoDigital.Imagens.voltar.png");
+            btn_perfil.Source = ImageSource.FromResource("BancoDigital.Imagens.perfil.png");
+            btn_extrato.Source = ImageSource.FromResource("BancoDigital.Imagens.extrato.png");
 
-            string[] resultsArray = explode(" ", App.DadosCorrentista.nome);
-            string Nome = resultsArray[0];
+
+
+            //string[] resultsArray = explode(" ", App.DadosCorrentista.nome);
+            //string Nome = resultsArray[0];
 
             //string Saldo = App.DadosConta.saldo.ToString();
 
-            txt_correntista.Text = Nome;
+            txt_correntista.Text = "Nome";
            
         }
 
@@ -31,5 +37,19 @@ namespace BancoDigital.View
             return source.Split(new string[] { separator }, StringSplitOptions.None);
         }
 
+        private void btn_voltar_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_perfil_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_extrato_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }
