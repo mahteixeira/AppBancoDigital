@@ -22,12 +22,12 @@
 
             <Frame Background="#fff" HeightRequest="700" Margin="0,20,0,-50" CornerRadius="45">
                 <StackLayout>
-                     <Grid RowDefinitions="*" ColumnDefinitions="*,*,*,*" Margin="0,20,0,0">
-                        <ImageButton x:Name="btn_extrato" Clicked="btn_extrato_Clicked" Grid.Column="0" Style="{StaticResource btn_inicio}"/>
-                        <ImageButton Grid.Column="1" Style="{StaticResource btn_inicio}"/>
-                        <ImageButton Grid.Column="2" Style="{StaticResource btn_inicio}"/>
-                        <ImageButton Grid.Column="3" Style="{StaticResource btn_inicio}"/>
+                    <Grid RowDefinitions="*" ColumnDefinitions="*,*,*">
+                        <Button Grid.Row="0" Grid.Column="0" x:Name="btn_pix" Clicked="btn_pix_Clicked" Text="Pix" CornerRadius="20" TextColor="#EE83D7" BackgroundColor="White" Style="{StaticResource fonteTitulos}" BorderColor="#EE83D7" BorderWidth="1"/>
+                        <Button Grid.Row="0" Grid.Column="1" x:Name="btn_cartao" Clicked="btn_cartao_Clicked" Text="Cartões" CornerRadius="20" TextColor="#EE83D7" BackgroundColor="White" Style="{StaticResource fonteTitulos}" BorderColor="#EE83D7" BorderWidth="1"/>
+                        <Button Grid.Row="0" Grid.Column="2" x:Name="btn_transacao" Clicked="btn_transacao_Clicked" Text="Transação" CornerRadius="20" TextColor="#EE83D7" BackgroundColor="White" Style="{StaticResource fonteTitulos}" BorderColor="#EE83D7" BorderWidth="1"/>
                     </Grid>
+                    <Label Text="Extrato" Style="{StaticResource fonteTitulos}" TextColor="#EE83D7" FontSize="23" Margin="0,20,0,0"/>
                 </StackLayout>
             </Frame>
         </StackLayout>

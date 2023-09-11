@@ -19,8 +19,7 @@ namespace BancoDigital.View
             NavigationPage.SetHasNavigationBar(this, false);
             btn_voltar.Source = ImageSource.FromResource("BancoDigital.Imagens.voltar.png");
             btn_perfil.Source = ImageSource.FromResource("BancoDigital.Imagens.perfil.png");
-            btn_extrato.Source = ImageSource.FromResource("BancoDigital.Imagens.extrato.png");
-
+            
 
 
             //string[] resultsArray = explode(" ", App.DadosCorrentista.nome);
@@ -48,6 +47,30 @@ namespace BancoDigital.View
         }
 
         private void btn_extrato_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_pix_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void btn_cartao_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+
+                await Navigation.PushAsync(new View.Pags.Cartoes.Cartoes());
+
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Ops", ex.Message, "OK");
+            }
+        }
+
+        private void btn_transacao_Clicked(object sender, EventArgs e)
         {
 
         }
