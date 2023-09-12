@@ -33,11 +33,20 @@ namespace BancoDigital.View
 
         private async void lst_contas_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            Conta conta_selecionada = (Conta)lst_contas.SelectedItem;
+            try
+            {
+                Conta conta_selecionada = (Conta)lst_contas.SelectedItem;
 
-            Conta co = await DataServiceConta.SelectConta(conta_selecionada.numero);
+                Conta co = await DataServiceConta.SelectConta(conta_selecionada);
 
-            Console.WriteLine("Conta selecionada = " + co.numero);
+                //Console.WriteLine("______________________________________");
+                //Console.WriteLine("Conta selecionada = " + co.numero);
+                App.DadosConta = co;
+
+                await Navigation.PushAsync(new View.Inicio());
+           
+            } catch(Exception ex) { await DisplayAlert("Ops", ex.Message, "OK"); }
+            
         }
     }
 }

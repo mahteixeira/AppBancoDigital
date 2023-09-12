@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BancoDigital.View.Cadastro;
+using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
@@ -20,14 +21,19 @@ namespace BancoDigital.View
             btn_voltar.Source = ImageSource.FromResource("BancoDigital.Imagens.voltar.png");
             btn_perfil.Source = ImageSource.FromResource("BancoDigital.Imagens.perfil.png");
             
+            
 
 
-            //string[] resultsArray = explode(" ", App.DadosCorrentista.nome);
-            //string Nome = resultsArray[0];
+            string[] resultsArray = explode(" ", App.DadosCorrentista.nome);
+            string Nome = resultsArray[0];
 
-            //string Saldo = App.DadosConta.saldo.ToString();
+            txt_correntista.Text = Nome;
 
-            txt_correntista.Text = "Nome";
+            string Saldo = App.DadosConta.saldo.ToString("C");
+
+            txt_saldo.Text = Saldo;
+
+            
            
         }
 
@@ -36,9 +42,9 @@ namespace BancoDigital.View
             return source.Split(new string[] { separator }, StringSplitOptions.None);
         }
 
-        private void btn_voltar_Clicked(object sender, EventArgs e)
+        private async void btn_voltar_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new View.lista());
         }
 
         private void btn_perfil_Clicked(object sender, EventArgs e)

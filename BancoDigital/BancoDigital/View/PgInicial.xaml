@@ -6,8 +6,8 @@
     <ContentPage.Background>
         <!-- StartPoint defaults to (0,0) -->
         <LinearGradientBrush EndPoint="1,0">
-            <GradientStop Color="#BB4DCF" Offset="0.1" />
-            <GradientStop Color="#EE83D7" Offset="1.0" />
+            <GradientStop Color="#EE83D7" Offset="0.1" />
+            <GradientStop Color="#E789E9" Offset="1.0" />
         </LinearGradientBrush>
     </ContentPage.Background>
     <ContentPage.Content>
@@ -18,7 +18,7 @@
                 <ImageButton x:Name="btn_perfil" Clicked="btn_perfil_Clicked" Grid.Column="2" WidthRequest="20" BackgroundColor="Transparent" Margin="0,30,-70,-5"/>
             </Grid>
             <Label Text="Seu saldo:" Style="{StaticResource fonteComum}" FontSize="17" Margin="12,20,0,0" TextColor="#fff"/>
-            <Label x:Name="txt_saldo" Text="R$ 0,00" Style="{StaticResource fonteTitulos}" FontSize="50" TextColor="#fff" Margin="10,-10,0,0"/>
+            <Label x:Name="txt_saldo" Style="{StaticResource fonteTitulos}" FontSize="50" TextColor="#fff" Margin="10,-10,0,0"/>
 
             <Frame Background="#fff" HeightRequest="700" Margin="0,20,0,-50" CornerRadius="45">
                 <StackLayout>

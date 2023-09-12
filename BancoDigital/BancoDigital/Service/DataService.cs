@@ -58,12 +58,18 @@ namespace BancoDigital.Service
 
             using (HttpClient client = new HttpClient())
             {
+                Console.WriteLine("-------------- JSON ENVIADO -----------------");
+                Console.WriteLine(json_object);
+                Console.WriteLine("-------------------------------");
+
                 HttpResponseMessage response = await client.PostAsync(
                     uri,
                     new StringContent(json_object, Encoding.UTF8, "application/json")
                 );
 
+                Console.WriteLine("------------ JSON RECEBIDO -------------------");
                 Console.WriteLine(response.Content.ReadAsStringAsync().Result);
+                Console.WriteLine("-------------------------------");
 
                 if (response.IsSuccessStatusCode)
                 {

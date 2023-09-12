@@ -11,9 +11,9 @@ namespace BancoDigital.Service
 {
     public class DataServiceConta : DataService
     {
-        public static async Task<Conta> SelectConta(string numero_conta)
+        public static async Task<Conta> SelectConta(Conta conta_escolhida)
         {
-            var json_to_send = JsonConvert.SerializeObject(numero_conta);
+            var json_to_send = JsonConvert.SerializeObject(conta_escolhida);
 
             string json = await DataService.PostDataToService(json_to_send, "/conta/entrar");
 
