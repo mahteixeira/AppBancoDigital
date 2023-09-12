@@ -20,6 +20,7 @@
     <None Remove="Imagens\olhoFechado.png" />
     <None Remove="Imagens\perfil.png" />
     <None Remove="Imagens\verificar.png" />
+    <None Remove="Imagens\voltar-Rosa.png" />
     <None Remove="Imagens\voltar.png" />
   </ItemGroup>
 
@@ -51,6 +52,9 @@
     <EmbeddedResource Include="Imagens\verificar.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Imagens\voltar-Rosa.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Imagens\voltar.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -62,6 +66,8 @@
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
     <PackageReference Include="Xamarin.Forms.BehaviorValidationPack" Version="1.1.1" />
+    <PackageReference Include="ZXing.Net.Mobile" Version="2.4.1" />
+    <PackageReference Include="ZXing.Net.Mobile.Forms" Version="2.4.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -92,6 +98,9 @@
     <EmbeddedResource Update="View\Pags\Cartoes\Cartoes.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="View\Pags\Pix\gerarQrCode.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="View\PgInicial.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -102,6 +111,5 @@
 
   <ItemGroup>
     <Folder Include="View\Pags\Transacao\" />
-    <Folder Include="View\Pags\Pix\" />
   </ItemGroup>
 </Project>

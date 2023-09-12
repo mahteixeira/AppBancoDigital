@@ -31,7 +31,14 @@
                         <Entry x:Name="txt_senha" FontSize="18" Style="{StaticResource fonteComum}" Margin="0,-15,0,0" IsPassword="True"/>
                         <ImageButton x:Name="visivel" Clicked="visivel_Clicked" HeightRequest="28" HorizontalOptions="EndAndExpand" WidthRequest="40" BackgroundColor="#fff" Margin="0,-45,0,11" />
 
-                        <Button Text="ENTRAR" x:Name="btn_entrar" Style="{StaticResource fonteTitulos}" BackgroundColor="#EE83D7" CornerRadius="20" Clicked="btn_entrar_Clicked"/>
+                        <Button Text="ENTRAR" x:Name="btn_entrar" Style="{StaticResource fonteTitulos}" CornerRadius="20" Clicked="btn_entrar_Clicked">
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="1,0">
+                                    <GradientStop Color="#EE83D7" Offset="0.1" />
+                                    <GradientStop Color="#BB4DCF" Offset="1.0" />
+                                </LinearGradientBrush>
+                            </Button.Background>
+                        </Button>
                         
                     </StackLayout>
                 </Frame>

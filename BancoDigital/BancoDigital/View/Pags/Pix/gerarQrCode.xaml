@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BancoDigital.View.Pags.Pix.gerarQrCode"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
+
+
+    <ContentPage.Content>
+        <StackLayout Background="#fff">
+            <Grid RowDefinitions="*" ColumnDefinitions="*,*,*" Margin="0,30,0,0">
+                <ImageButton Grid.Column="0" x:Name="btn_voltar" Clicked="btn_voltar_Clicked" BackgroundColor="Transparent" WidthRequest="24" Scale="0.7" HorizontalOptions="Start" Margin="15,0,0,0"/>
+                <Label Text="Receber por PIX" Grid.Column="1" Style="{StaticResource fonteTitulos}" TextColor="#EE83D7" FontSize="15" Margin="0,5,0,0" />
+                <Button Text="?" Grid.Column="2" Style="{StaticResource fonteTitulos}" BackgroundColor="Transparent" Scale="1.5" TextColor="#EE83D7" BorderWidth="2" HeightRequest="35" Margin="0,-10,-60,0"/>
+            </Grid>
+
+            <Frame CornerRadius="10" VerticalOptions="StartAndExpand" WidthRequest="50" Scale="0.9">
+                <Frame.Background>
+                    <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                        <GradientStop Color="#EE83D7" Offset="0.1" />
+                        <GradientStop Color="#BB4DCF" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Frame.Background>
+                <StackLayout Padding="20" VerticalOptions="CenterAndExpand">
+
+                    <Frame Scale="2" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" CornerRadius="10" HeightRequest="100" WidthRequest="100" Margin="0,70,0,0">
+                        <Image Aspect="AspectFill" x:Name="img_qr" Scale="1.5"/>
+                    </Frame>
+
+                    <Button x:Name="btn_gerar" Text="Gerar QR Code" Clicked="btn_gerar_Clicked" Style="{StaticResource fonteTitulos}" BackgroundColor="#fff" TextColor="#EE83D7" HeightRequest="45" Margin="0,90,0,0" CornerRadius="18"  />
+
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
