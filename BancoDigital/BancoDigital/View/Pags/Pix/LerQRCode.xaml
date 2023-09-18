@@ -5,28 +5,32 @@
              x:Class="BancoDigital.View.Pags.Pix.LerQRCode">
     <ContentPage.Content>
         <StackLayout>
-            <Grid VerticalOptions="FillAndExpand">
+
+            <Grid RowDefinitions="*" ColumnDefinitions="*,30,*" Margin="0,30,0,0">
+                <ImageButton Grid.Column="0" x:Name="btn_voltar" Clicked="btn_voltar_Clicked" BackgroundColor="Transparent" WidthRequest="24" Scale="0.7" HorizontalOptions="Start" Margin="10,0,0,0"/>
+                <Label Text="PIX" Grid.Column="1" Style="{StaticResource fonteTitulos}" TextColor="#EE83D7" FontSize="15" Margin="0,5,0,0" />
+                <Button Text="?" Grid.Column="2" Style="{StaticResource fonteTitulos}" BackgroundColor="Transparent" Scale="1.5" TextColor="#EE83D7" BorderWidth="2" HeightRequest="35" Margin="0,-7,-125,0"/>
+            </Grid>
+            
+            <Frame VerticalOptions="CenterAndExpand" HeightRequest="600" CornerRadius="10" Margin="10" BackgroundColor="Aquamarine">
+                <Frame.Background>
+                    <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                        <GradientStop Color="#EE83D7" Offset="0.1" />
+                        <GradientStop Color="#BB4DCF" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Frame.Background>
+                
+                <Grid VerticalOptions="CenterAndExpand" Margin="0,17,0,-80">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="6*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
                 <zxing:ZXingScannerView x:Name="zxing"
                                          VerticalOptions="FillAndExpand"/>
-                <zxing:ZXingDefaultOverlay TopText="Aponte sua camera para o QR CODE"
-                                           BottomText="O resultado vai aparecer abaixo" />
-                <Label x:Name="lblResult"
-                       Grid.Row="1"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"/>
-
+                <zxing:ZXingDefaultOverlay TopText="Aponte sua camera para o QR CODE"/>
             </Grid>
-
-            <Button x:Name="btn_voltar" Text="VOLTAR" BackgroundColor="#000" TextColor="#fff"
-            CornerRadius="10" HorizontalOptions="CenterAndExpand" Clicked="btn_voltar_Clicked" VerticalOptions="Center" />
-
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

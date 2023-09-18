@@ -17,12 +17,8 @@ namespace BancoDigital.View.Pags.Pix
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
+            btn_voltar.Source = ImageSource.FromResource("BancoDigital.Imagens.voltar-Rosa.png");
 
-            zxing.OnScanResult += (result) =>
-               Device.BeginInvokeOnMainThread(() =>
-               {
-                   lblResult.Text = result.Text;
-               });
         }
 
         protected override void OnAppearing()
@@ -43,5 +39,6 @@ namespace BancoDigital.View.Pags.Pix
         {
             await Navigation.PushAsync(new View.Pags.Pix.PixMenu());
         }
+
     }
 }

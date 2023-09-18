@@ -16,6 +16,13 @@ namespace BancoDigital.View.Pags.Cartoes
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
+            btn_voltar.Source = ImageSource.FromResource("BancoDigital.Imagens.voltar-Rosa.png");
+
+        }
+
+        private async void btn_voltar_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.Inicio());
         }
     }
 }
