@@ -34,8 +34,9 @@ namespace BancoDigital.View.Pags.Pix
             img_qr.Source = ImageSource.FromStream(() => new MemoryStream(qrCodeBytes));
         }
 
-        private void btn_voltar_Clicked(object sender, EventArgs e)
+        private async void btn_voltar_Clicked(object sender, EventArgs e)
         {
+            await Navigation.PushAsync(new View.Pags.Pix.PixMenu());
 
         }
     }

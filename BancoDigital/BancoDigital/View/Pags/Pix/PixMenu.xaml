@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BancoDigital.View.Pags.Pix.PixMenu">
+    <ContentPage.Content>
+        <StackLayout Background="#fff">
+            <Grid RowDefinitions="*" ColumnDefinitions="*,30,*" Margin="0,30,0,0">
+                <ImageButton Grid.Column="0" x:Name="btn_voltar" Clicked="btn_voltar_Clicked" BackgroundColor="Transparent" WidthRequest="24" Scale="0.7" HorizontalOptions="Start" Margin="10,0,0,0"/>
+                <Label Text="PIX" Grid.Column="1" Style="{StaticResource fonteTitulos}" TextColor="#EE83D7" FontSize="15" Margin="0,5,0,0" />
+                <Button Text="?" Grid.Column="2" Style="{StaticResource fonteTitulos}" BackgroundColor="Transparent" Scale="1.5" TextColor="#EE83D7" BorderWidth="2" HeightRequest="35" Margin="0,-7,-125,0"/>
+            </Grid>
+
+            <Button Text="Pagar                                                                                                 >" x:Name="btn_pagarPix" Style="{StaticResource fonteTitulos}" Clicked="btn_pagarPix_Clicked" BorderColor="#EE83D7" TextColor="#EE83D7" BorderWidth="1.4" BackgroundColor="#fff" Margin="10" CornerRadius="10"/>
+            <Button Text="Receber                                                                                            >" x:Name="btn_receberPIX" Style="{StaticResource fonteTitulos}" Clicked="btn_receberPIX_Clicked"  BorderColor="#EE83D7" TextColor="#EE83D7" BorderWidth="1.4" BackgroundColor="#fff" Margin="10,-5,10,0" CornerRadius="10"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

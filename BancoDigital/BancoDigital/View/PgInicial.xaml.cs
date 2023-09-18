@@ -59,7 +59,7 @@ namespace BancoDigital.View
 
         private async void btn_pix_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new View.Pags.Pix.gerarQrCode());
+            await Navigation.PushAsync(new View.Pags.Pix.PixMenu());
 
         }
 
