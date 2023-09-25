@@ -10,8 +10,18 @@
                 <Button Text="?" Grid.Column="2" Style="{StaticResource fonteTitulos}" BackgroundColor="Transparent" Scale="1.5" TextColor="#EE83D7" BorderWidth="2" HeightRequest="35" Margin="0,-7,-125,0"/>
             </Grid>
 
-            <Button Text="Pagar                                                                                                 >" x:Name="btn_pagarPix" Style="{StaticResource fonteTitulos}" Clicked="btn_pagarPix_Clicked" BorderColor="#EE83D7" TextColor="#EE83D7" BorderWidth="1.4" BackgroundColor="#fff" Margin="10" CornerRadius="10"/>
-            <Button Text="Receber                                                                                            >" x:Name="btn_receberPIX" Style="{StaticResource fonteTitulos}" Clicked="btn_receberPIX_Clicked"  BorderColor="#EE83D7" TextColor="#EE83D7" BorderWidth="1.4" BackgroundColor="#fff" Margin="10,-5,10,0" CornerRadius="10"/>
+            <Label Text="Pagar com PIX" Style="{StaticResource fonteTitulos}" TextColor="#EE83D7" Margin="12,20,10,10" FontSize="20"/>
+            <Grid ColumnDefinitions="*,*,*" Margin="10,0,10,0" >
+                <Button Text="QrCode" Grid.Column="0" HeightRequest="120" Style="{StaticResource fonteComum}" Background="#E5E7E9" CornerRadius="10" Scale="0.93"/>
+                <Button Text="Chave Pix" Grid.Column="1" Style="{StaticResource fonteComum}" Background="#E5E7E9" CornerRadius="10" Scale="0.93"/>
+                <Button Text="Copia e Cola" Grid.Column="2" Style="{StaticResource fonteComum}" Background="#E5E7E9" CornerRadius="10" Scale="0.93"/>
+            </Grid>
+
+            <Label Text="Receber por PIX" Style="{StaticResource fonteTitulos}" TextColor="#EE83D7" Margin="12,20,10,10" FontSize="20"/>
+            <Button Text="Gerar QR Code" Margin="12,0,12,0" Style="{StaticResource fonteComum}" Background="#E5E7E9" CornerRadius="10"/>
+            <Button Text="Minhas chaves" Margin="10,5,10,0" Style="{StaticResource fonteComum}" Background="#E5E7E9" CornerRadius="10"/>
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

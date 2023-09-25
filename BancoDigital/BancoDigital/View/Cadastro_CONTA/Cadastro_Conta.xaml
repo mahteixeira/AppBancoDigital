@@ -13,14 +13,14 @@
 
             <Picker x:Name="pck_conta" BackgroundColor="#ededed" Title="Selecione..." Style="{StaticResource fonteComum}" Margin="0,-40,0,0">
                 <Picker.Items>
-                    <x:String>Corrente</x:String>
-                    <x:String>Poupança</x:String>
+                        <x:String>Conta Corrente</x:String>
+                        <x:String>Conta Poupança</x:String>
                 </Picker.Items>
             </Picker>
 
                 <Label Text="Crie uma senha:" FontSize="18" Style="{StaticResource fonteComum}"  Margin="0,30,0,0"/>
             <Entry x:Name="txt_senha_conta" FontSize="18" Style="{StaticResource fonteComum}" BackgroundColor="#ededed"/>
-            <CheckBox x:Name="senha_igual" IsChecked="false" />
+            <CheckBox x:Name="senha_igual" IsChecked="false"  />
                 <Label Text="Desejo que minha conta tenha a mesma senha que já inseri." TextColor="#525252"  Margin="30,-40,0,0"/>
 
                 <Button Text="Continuar"  x:Name="btn_continuar" Clicked="btn_continuar_Clicked" CornerRadius="20" TextColor="White" Style="{StaticResource fonteTitulos}" Margin="0,200,0,0">

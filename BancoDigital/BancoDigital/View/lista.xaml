@@ -9,7 +9,8 @@
             <Image x:Name="logo" Margin="0,-50,0,20" WidthRequest="150"/>
             <Label Text="Selecione uma conta" FontSize="22" Style="{StaticResource fonteComum}" Margin="10,0,0,0" />
 
-            <ListView x:Name="lst_contas" RowHeight="70" Margin="10,5,10,5" VerticalOptions="CenterAndExpand" ItemSelected="lst_contas_ItemSelected">
+            <ScrollView Orientation="Vertical" HeightRequest="500">
+                <ListView x:Name="lst_contas" RowHeight="70" Margin="10,5,10,5" VerticalOptions="CenterAndExpand" ItemSelected="lst_contas_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -23,8 +24,9 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            </ScrollView>
             
-            <Button Text="Criar nova conta" x:Name="conta_criar" Clicked="conta_criar_Clicked" Style="{StaticResource fonteTitulos}" BackgroundColor="#fff"  TextColor="#EE83D7" BorderWidth="2" Margin="50,0,50,-102" HeightRequest="35" VerticalOptions="CenterAndExpand"/>
+            <Button Text="Criar nova conta" x:Name="conta_criar" Clicked="conta_criar_Clicked" Style="{StaticResource fonteTitulos}" BackgroundColor="#fff"  TextColor="#EE83D7" BorderWidth="2" Margin="50,0,50,-92" HeightRequest="35" VerticalOptions="CenterAndExpand"/>
 
             
             

@@ -98,10 +98,10 @@
     <EmbeddedResource Update="View\Pags\Cartoes\Cartoes.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\Pags\Pix\gerarQrCode.xaml">
+    <EmbeddedResource Update="View\Pags\Pix\Receber\gerarQrCode.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\Pags\Pix\LerQRCode.xaml">
+    <EmbeddedResource Update="View\Pags\Pix\Pagar\LerQRCode.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\Pags\Pix\PixMenu.xaml">

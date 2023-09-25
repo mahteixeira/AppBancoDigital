@@ -41,41 +41,83 @@ namespace BancoDigital.View.Cadastro_CONTA
 
                     if (senha_igual.IsChecked == true)
                     {
-                        await DisplayAlert("Tome cuidado!", "Tenha noção que estamos falando de dinheiro, e sua segurança é a mais importante XD", "Estou ciente disso!");
-                        senha_conta = App.Globais._senha;
-                        txt_senha_conta.IsEnabled = false;
+                        var resultado = await DisplayAlert("Tome cuidado!", "Tenha noção que estamos falando de dinheiro, e sua segurança é a mais importante XD", "Estou ciente disso!" , "Quero mudar");
+                        if (resultado == true)
+                        {
+                            senha_conta = App.DadosCorrentista.senha;
+                            tipo_conta = pck_conta.SelectedIndex.ToString();
+                            if (tipo_conta == "0")
+                            {
+                                tipo_conta = "Conta Corrente";
+                            } else
+                            {
+                                tipo_conta = "Conta Poupança";
+                            }
+
+
+                            Random random = new Random();
+                            string n_pt1 = random.Next(10000000, 99999999).ToString();
+                            string n_pt2 = random.Next(0, 9).ToString();
+
+                            string numero = n_pt1 + "-" + n_pt2;
+
+
+                            await DataServiceConta.Cadastrar(new Conta
+                            {
+                                numero = numero,
+                                tipo = tipo_conta,
+                                senha = senha_conta,
+                                id_correntista = App.DadosCorrentista.id,
+                                saldo = 0,
+                                limite = 0
+                            });
+
+                            await Navigation.PushAsync(new View.lista());
+
+
+                        }
+
+
+
                     }
                     else
                     {
                         senha_conta = txt_senha_conta.Text;
-                        App.Globais._senha = senha_conta;
-                        txt_senha_conta.IsEnabled = true;
+
+
+                        tipo_conta = pck_conta.SelectedIndex.ToString();
+
+
+                        senha_conta = txt_senha_conta.Text;
+
+
+                        Random random = new Random();
+                        string n_pt1 = random.Next(10000000, 99999999).ToString();
+                        string n_pt2 = random.Next(0, 9).ToString();
+
+                        string numero = n_pt1 + "-" + n_pt2;
+
+
+                        await DataServiceConta.Cadastrar(new Conta
+                        {
+                            numero = numero,
+                            tipo = tipo_conta,
+                            senha = senha_conta,
+                            id_correntista = App.DadosCorrentista.id,
+                            saldo = 0,
+                            limite = 0
+                        });
+
+                        await Navigation.PushAsync(new View.lista());
+
+
                     }
 
-                    tipo_conta = pck_conta.SelectedIndex.ToString();
-                    App.Globais._tipo_conta = tipo_conta;
 
-                    senha_conta = txt_senha_conta.Text;
-                    App.Globais._senha = senha_conta;
 
-                    Random random = new Random();
-                    string n_pt1 = random.Next(10000000, 99999999).ToString();
-                    string n_pt2 = random.Next(0, 9).ToString();
 
-                    string numero = n_pt1 + "-" + n_pt2;
-                    
 
-                    await DataServiceConta.Cadastrar(new Conta
-                    {
-                        numero = numero,
-                        tipo = tipo_conta,
-                        senha = senha_conta,
-                        id_correntista = App.DadosCorrentista.id,
-                        saldo = 0,
-                        limite = 0
-                    });
 
-                    //await Navigation.PushAsync(new View.Cadastro_CONTA.Numero_Conta());
 
 
                 }

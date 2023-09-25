@@ -10,9 +10,9 @@
                 <Button Text="?" Grid.Column="2" Style="{StaticResource fonteTitulos}" BackgroundColor="Transparent" Scale="1.5" TextColor="#EE83D7" BorderWidth="2" HeightRequest="35" Margin="0,-7,-125,0"/>
             </Grid>
 
-            <ScrollView Orientation="Horizontal" HorizontalOptions="StartAndExpand" >
-                <StackLayout Orientation="Horizontal" Margin="10">
-                    <Frame BackgroundColor="Coral" WidthRequest="270" HeightRequest="160" CornerRadius="10">
+            <ScrollView Orientation="Horizontal" HorizontalOptions="StartAndExpand" HorizontalScrollBarVisibility="Never">
+                <StackLayout Orientation="Horizontal" Margin="10,30,10,10">
+                    <Frame WidthRequest="270" HeightRequest="160" CornerRadius="10">
                         <Frame.Background>
                             <LinearGradientBrush EndPoint="1,0">
                                 <GradientStop Color="#BB4DCF" Offset="0.1" />

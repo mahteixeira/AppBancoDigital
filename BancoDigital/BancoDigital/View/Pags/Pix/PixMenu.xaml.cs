@@ -20,16 +20,6 @@ namespace BancoDigital.View.Pags.Pix
 
         }
 
-        private async void btn_pagarPix_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new View.Pags.Pix.LerQRCode());
-        }
-
-        private async void btn_receberPIX_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new View.Pags.Pix.gerarQrCode());    
-        }
-
         private async void btn_voltar_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new View.Inicio());
