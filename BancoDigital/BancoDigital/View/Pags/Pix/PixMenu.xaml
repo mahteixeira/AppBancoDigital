@@ -12,14 +12,16 @@
 
             <Label Text="Pagar com PIX" Style="{StaticResource fonteTitulos}" TextColor="#EE83D7" Margin="12,20,10,10" FontSize="20"/>
             <Grid ColumnDefinitions="*,*,*" Margin="10,0,10,0" >
-                <Button Text="QrCode" Grid.Column="0" HeightRequest="120" Style="{StaticResource fonteComum}" Background="#E5E7E9" CornerRadius="10" Scale="0.93"/>
-                <Button Text="Chave Pix" Grid.Column="1" Style="{StaticResource fonteComum}" Background="#E5E7E9" CornerRadius="10" Scale="0.93"/>
-                <Button Text="Copia e Cola" Grid.Column="2" Style="{StaticResource fonteComum}" Background="#E5E7E9" CornerRadius="10" Scale="0.93"/>
+                <Button Text="QrCode" x:Name="btn_pagar_qr" Clicked="btn_pagar_qr_Clicked" Grid.Column="0" HeightRequest="120" Style="{StaticResource fonteComum}" Background="#E5E7E9" CornerRadius="10" Scale="0.93"/>
+                <Button Text="Chave Pix" x:Name="btn_pagar_chave" Clicked="btn_pagar_chave_Clicked" Grid.Column="1" Style="{StaticResource fonteComum}" Background="#E5E7E9" CornerRadius="10" Scale="0.93"/>
+                <Button Text="Copia e Cola" x:Name="btn_pagar_copiaecola" Clicked="btn_pagar_copiaecola_Clicked" Grid.Column="2" Style="{StaticResource fonteComum}" Background="#E5E7E9" CornerRadius="10" Scale="0.93"/>
             </Grid>
 
             <Label Text="Receber por PIX" Style="{StaticResource fonteTitulos}" TextColor="#EE83D7" Margin="12,20,10,10" FontSize="20"/>
-            <Button Text="Gerar QR Code" Margin="12,0,12,0" Style="{StaticResource fonteComum}" Background="#E5E7E9" CornerRadius="10"/>
-            <Button Text="Minhas chaves" Margin="10,5,10,0" Style="{StaticResource fonteComum}" Background="#E5E7E9" CornerRadius="10"/>
+            <Button Text="Gerar QR Code" x:Name="btn_receberr_qr" Clicked="btn_receberr_qr_Clicked" Margin="12,0,12,0" Style="{StaticResource fonteComum}" Background="#E5E7E9" CornerRadius="10"/>
+            <Button Text="Minhas chaves" x:Name="btn_ver_chaves" Clicked="btn_ver_chaves_Clicked" Margin="10,5,10,0" Style="{StaticResource fonteComum}" Background="#E5E7E9" CornerRadius="10"/>
+
+            <Image x:Name="canto2" HeightRequest="250" HorizontalOptions="End" Margin="0,177,-2,0"/>
 
 
         </StackLayout>
