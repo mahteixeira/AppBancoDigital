@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BancoDigital.Model;
+using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
@@ -19,6 +20,10 @@ namespace BancoDigital.View.Pags.Pix
             NavigationPage.SetHasNavigationBar(this, false);
             btn_voltar.Source = ImageSource.FromResource("BancoDigital.Imagens.voltar-Rosa.png");
             canto2.Source = ImageSource.FromResource("BancoDigital.Imagens.canto2.png");
+
+            List<ChavePix> arr_pix = App.DadosConta.lista_pix;
+
+            lst_chaves.ItemsSource = arr_pix;
 
         }
 
@@ -47,9 +52,9 @@ namespace BancoDigital.View.Pags.Pix
             await Navigation.PushAsync(new View.Pags.Pix.gerarQrCode());
         }
 
-        private void btn_ver_chaves_Clicked(object sender, EventArgs e)
+        private async void btn_novaChave_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new View.Pags.Pix.CadastroChave());
         }
     }
 }

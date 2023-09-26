@@ -4,14 +4,14 @@
              x:Class="BancoDigital.View.Pags.Pix.PixMenu">
     <ContentPage.Content>
         <StackLayout Background="#fff">
-            <Grid RowDefinitions="*" ColumnDefinitions="*,30,*" Margin="0,30,0,0">
+            <Grid RowDefinitions="27" ColumnDefinitions="*,30,*" Margin="0,30,0,10">
                 <ImageButton Grid.Column="0" x:Name="btn_voltar" Clicked="btn_voltar_Clicked" BackgroundColor="Transparent" WidthRequest="24" Scale="0.7" HorizontalOptions="Start" Margin="10,0,0,0"/>
                 <Label Text="PIX" Grid.Column="1" Style="{StaticResource fonteTitulos}" TextColor="#EE83D7" FontSize="15" Margin="0,5,0,0" />
                 <Button Text="?" Grid.Column="2" Style="{StaticResource fonteTitulos}" BackgroundColor="Transparent" Scale="1.5" TextColor="#EE83D7" BorderWidth="2" HeightRequest="35" Margin="0,-7,-125,0"/>
             </Grid>
 
-            <Label Text="Pagar com PIX" Style="{StaticResource fonteTitulos}" TextColor="#EE83D7" Margin="12,20,10,10" FontSize="20"/>
-            <Grid ColumnDefinitions="*,*,*" Margin="10,0,10,0" >
+            <Label Text="Pagar com PIX" Style="{StaticResource fonteTitulos}" TextColor="#EE83D7" Margin="12,0,10,10" FontSize="20"/>
+            <Grid ColumnDefinitions="*,*,*" Margin="10,-10,10,-20" >
                 <Button Text="QrCode" x:Name="btn_pagar_qr" Clicked="btn_pagar_qr_Clicked" Grid.Column="0" HeightRequest="120" Style="{StaticResource fonteComum}" Background="#E5E7E9" CornerRadius="10" Scale="0.93"/>
                 <Button Text="Chave Pix" x:Name="btn_pagar_chave" Clicked="btn_pagar_chave_Clicked" Grid.Column="1" Style="{StaticResource fonteComum}" Background="#E5E7E9" CornerRadius="10" Scale="0.93"/>
                 <Button Text="Copia e Cola" x:Name="btn_pagar_copiaecola" Clicked="btn_pagar_copiaecola_Clicked" Grid.Column="2" Style="{StaticResource fonteComum}" Background="#E5E7E9" CornerRadius="10" Scale="0.93"/>
@@ -19,7 +19,27 @@
 
             <Label Text="Receber por PIX" Style="{StaticResource fonteTitulos}" TextColor="#EE83D7" Margin="12,20,10,10" FontSize="20"/>
             <Button Text="Gerar QR Code" x:Name="btn_receberr_qr" Clicked="btn_receberr_qr_Clicked" Margin="12,0,12,0" Style="{StaticResource fonteComum}" Background="#E5E7E9" CornerRadius="10"/>
-            <Button Text="Minhas chaves" x:Name="btn_ver_chaves" Clicked="btn_ver_chaves_Clicked" Margin="10,5,10,0" Style="{StaticResource fonteComum}" Background="#E5E7E9" CornerRadius="10"/>
+            
+            
+            <Label Text="Suas Chaves" Style="{StaticResource fonteTitulos}" TextColor="#EE83D7" Margin="12,20,10,-450" FontSize="20"/>
+            <ScrollView Orientation="Vertical" HeightRequest="500">
+                <ListView x:Name="lst_chaves" RowHeight="70" Margin="0,5,10,5" VerticalOptions="CenterAndExpand">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid ColumnDefinitions="Auto" RowDefinitions="Auto">
+                                    <StackLayout WidthRequest="400" BackgroundColor="#e8e6e4" Padding="0,10,0,10" Margin="0,0,0,10">
+                                        <Label Grid.Row="0" Grid.Column="0" x:Name="txt_numero" Text="{Binding tipo}" Style="{StaticResource fonteTitulos}" TextColor="#000" FontSize="25" Margin="10,0,0,0"/>
+                                        <Label Grid.Row="1" Grid.Column="0" x:Name="txt_tipo" Text="{Binding chave}" Style="{StaticResource fonteComum}" FontSize="16" Margin="10,-7,0,0"/>
+                                    </StackLayout>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
+
+            <Button Text="Adicionar chave" x:Name="btn_novaChave" Clicked="btn_novaChave_Clicked" Style="{StaticResource fonteTitulos}" BackgroundColor="#fff"  TextColor="#EE83D7" BorderWidth="2" HeightRequest="35"/>
 
             <Image x:Name="canto2" HeightRequest="250" HorizontalOptions="End" Margin="0,177,-2,0"/>
 

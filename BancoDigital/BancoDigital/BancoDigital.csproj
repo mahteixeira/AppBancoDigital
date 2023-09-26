@@ -71,6 +71,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="View\Pags\Pix\Cadastro_CHAVEPIX\CadastroChave.xaml.cs">
+      <DependentUpon>CadastroChave.xaml</DependentUpon>
+    </Compile>
     <Compile Update="View\PgInicial.xaml.cs">
       <DependentUpon>PgInicial.xaml</DependentUpon>
     </Compile>
@@ -96,6 +99,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\Pags\Cartoes\Cartoes.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\Pags\Pix\Cadastro_CHAVEPIX\CadastroChave.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\Pags\Pix\Pagar\PagarComChave.xaml">

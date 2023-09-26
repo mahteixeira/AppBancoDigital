@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BancoDigital.View.Pags.Pix.CadastroChave">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image x:Name="canto" HeightRequest="250" HorizontalOptions="Start" Margin="0,0,0,0"/>
+            <StackLayout Margin="20,0">
+
+                <Label Text="Primeiro selecione o tipo da chave:" LineHeight="1.2" FontSize="18" Style="{StaticResource fonteComum}" Margin="0,0,0,50" TextColor="#666466"/>
+
+                <Picker x:Name="pck_tipo" BackgroundColor="#ededed" Title="Selecione..." Style="{StaticResource fonteComum}" Margin="0,-40,0,0">
+                    <Picker.Items>
+                        <x:String>CPF</x:String>
+                        <x:String>CNPJ</x:String>
+                        <x:String>Telefone</x:String>
+                        <x:String>Email</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label Text="Insira a chave:" FontSize="18" Style="{StaticResource fonteComum}"  Margin="0,30,0,0" TextColor="#666466"/>
+                <Label Text="AAAAAAA:" x:Name="AAAA" FontSize="18" Style="{StaticResource fonteComum}"  Margin="0,30,0,0" TextColor="#666466"/>
+                <Entry FontSize="18" Style="{StaticResource fonteComum}" BackgroundColor="#ededed"/>
+
+                <Button Text="Continuar" x:Name="btn_continuar"  CornerRadius="20" TextColor="White" Style="{StaticResource fonteTitulos}" Margin="0,270,0,0">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="1,0">
+                            <GradientStop Color="#EE83D7" Offset="0.1" />
+                            <GradientStop Color="#BB4DCF" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

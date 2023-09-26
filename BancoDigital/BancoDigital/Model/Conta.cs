@@ -14,5 +14,7 @@ namespace BancoDigital.Model
         public int? id_correntista { get; set;}
         public double saldo { get; set; }
         public double limite { get; set; }
+        public List<ChavePix> lista_pix { get; set; }
+
     }
 }
