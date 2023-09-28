@@ -19,7 +19,7 @@ namespace BancoDigital.Service
 
             ChavePix chavePix = obj as ChavePix;    
 
-            return obj as Conta;
+            return obj as ChavePix;
 
         }
     }

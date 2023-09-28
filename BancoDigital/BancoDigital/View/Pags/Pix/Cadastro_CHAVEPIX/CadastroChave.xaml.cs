@@ -1,4 +1,5 @@
 ﻿using BancoDigital.Model;
+using BancoDigital.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,23 @@ namespace BancoDigital.View.Pags.Pix
             NavigationPage.SetHasNavigationBar(this, false);
             canto.Source = ImageSource.FromResource("BancoDigital.Imagens.canto.png");
 
+        }
+
+        private async void btn_continuar_Clicked(object sender, EventArgs e)
+        {
+
+            string tipo_chave = pck_tipo.SelectedItem.ToString();
+            string chave_pix = txt_chave.Text;
+
+            await DataServiceChavePix.Adicionar(new ChavePix
+            {
+                tipo = tipo_chave,
+                chave = chave_pix,
+                id_conta = App.DadosConta.id 
+
+            });
+
+            await Navigation.PushAsync(new View.lista());
         }
     }
 }
