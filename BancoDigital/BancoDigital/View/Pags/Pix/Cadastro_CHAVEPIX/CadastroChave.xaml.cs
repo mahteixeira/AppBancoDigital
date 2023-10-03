@@ -24,19 +24,26 @@ namespace BancoDigital.View.Pags.Pix
 
         private async void btn_continuar_Clicked(object sender, EventArgs e)
         {
-
-            string tipo_chave = pck_tipo.SelectedItem.ToString();
-            string chave_pix = txt_chave.Text;
-
-            await DataServiceChavePix.Adicionar(new ChavePix
+            try
             {
-                tipo = tipo_chave,
-                chave = chave_pix,
-                id_conta = App.DadosConta.id 
+                string tipo_chave = pck_tipo.SelectedItem.ToString();
+                string chave_pix = txt_chave.Text;
 
-            });
+                await DataServiceChavePix.Adicionar(new ChavePix
+                {
+                    tipo = tipo_chave,
+                    chave = chave_pix,
+                    id_conta = App.DadosConta.id
 
-            await Navigation.PushAsync(new View.lista());
+                });
+
+                await Navigation.PushAsync(new View.lista());
+
+
+            } catch(Exception ex)
+            {
+                await DisplayAlert("Ops", ex.Message, "OK");
+            }           
         }
     }
 }
