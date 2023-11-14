@@ -27,11 +27,6 @@ namespace BancoDigital.View.Pags.Pix
 
         }
 
-        private async void btn_voltar_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new View.Inicio());
-        }
-
         private async void btn_pagar_qr_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new View.Pags.Pix.LerQRCode());  
@@ -55,6 +50,11 @@ namespace BancoDigital.View.Pags.Pix
         private async void btn_novaChave_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new View.Pags.Pix.CadastroChave());
+        }
+
+        private async void btn_voltar_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.Inicio());
         }
     }
 }
